@@ -86,7 +86,27 @@
     .link-container li:hover {
       background-color: #d1d1d474;
     }
-    
+
+    .creds {
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .creds a {
+      float: right;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 10px 15px;
+      text-decoration: none;
+      width: 50%;
+    }
+
+    .creds a:hover {
+      background-color: black;
+      color: white;
+    }
+
     /* For mobile phones: */
     [class*="col-"] {
     width: 100%;
@@ -132,6 +152,9 @@
     .menu-container ul {
       margin-bottom: 230px;
     }
+    .creds a {
+        width: auto
+    }
   }
 
   @media only screen and (min-width: 768px) {
@@ -152,24 +175,6 @@
     .grid-container {
         grid-template-columns: 5% 20% 75%;
         grid-template-rows: 10% 80% 10%;
-    }
-    .grid-item3 {
-        text-align: right;
-        padding: 5px 0;
-        grid-column-start: 3;
-        grid-column-end: 4;
-    }
-    .grid-item4 {
-        grid-column-start: 1;
-        grid-column-end: 3;
-    }
-    .grid-item5 {
-        grid-column-start: 3;
-        grid-column-end: 4;
-    }
-    .grid-item6 {
-        grid-column-start: 1;
-        grid-column-end: 4;
     }
     
   }
@@ -193,12 +198,12 @@
             <p style="margin:0; text-align:right;">
             Music
             </p>
-
         </div>
         <div class="grid-item3">
-            <p>
-                Log In &emsp;&emsp; Sign In &emsp;&emsp;
-            </p>
+            <div class="creds">
+                <a href="#">Log In</a>
+                <a href="#">Sign In</a>
+            </div>
         </div>
         <div class="grid-item4">
             <h1>Menu</h1>
