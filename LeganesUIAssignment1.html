@@ -12,8 +12,7 @@
 
     .grid-container {
         display: grid;
-        grid-template-columns: 20% 40% 40%;
-        grid-template-rows: 10% 80% 10%;
+        grid-template-columns: 20% 80%;
        
         background-color: blue;
        
@@ -33,8 +32,9 @@
     }
     .grid-item3 {
         font-size: 20px;
-        text-align: right;
-        padding: 5px 0;
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
 
     .grid-item4 {
@@ -43,9 +43,15 @@
         text-align: center;
     }
 
+    .grid-item5 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        text-align: center;
+    }
+
     .grid-item6 {
         grid-column-start: 1;
-        grid-column-end: 4;
+        grid-column-end: 3;
         font-size: 20px;
         text-align: center;
         padding: 5px 0;
@@ -62,7 +68,6 @@
       margin-bottom: 10px;
       background-color: #33e54e;
       color: #ffffff;
-      
     }
 
     .menu-container li:hover {
@@ -71,17 +76,15 @@
 
     .link-container ul {
       list-style-type: none;
-      margin: 0;
       padding: 0;
     }
 
     .link-container li {
       padding: 10px;
-      margin-bottom: 0px;      
     }
 
     .link-container li:hover {
-      background-color: #d4d1d1;
+      background-color: #d1d1d474;
     }
     
     /* For mobile phones: */
@@ -109,12 +112,25 @@
         grid-template-rows: 10% 80% 10%;
     }
     .grid-item3 {
+        text-align: right;
+        padding: 5px 0;
         grid-column-start: 3;
         grid-column-end: 4;
     }
     .grid-item4 {
         grid-column-start: 1;
         grid-column-end: 3;
+    }
+    .grid-item5 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    .grid-item6 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .menu-container ul {
+      margin-bottom: 230px;
     }
   }
 
@@ -138,6 +154,8 @@
         grid-template-rows: 10% 80% 10%;
     }
     .grid-item3 {
+        text-align: right;
+        padding: 5px 0;
         grid-column-start: 3;
         grid-column-end: 4;
     }
@@ -145,6 +163,15 @@
         grid-column-start: 1;
         grid-column-end: 3;
     }
+    .grid-item5 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    .grid-item6 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    
   }
 
   
@@ -190,8 +217,10 @@
                 </ul>
             </div>
         </div>
-        <div class="grid-item5">Songs</div>
-        <div class="grid-item6 .col-6">
+        <div class="grid-item5">
+            <h1>Songs</h1>
+        </div>
+        <div class="grid-item6">
             <p> 
                 If you're new here, don't forget to create an account to save your favorite songs!
             </p>
