@@ -25,33 +25,33 @@
       height: 100%;
   }
 
-  .grid-container>div {
+  .grid-container>div { /* The entire screen */
       background-color: aliceblue;
       border: 1px solid rgba(0, 0, 0, 0.8);
   }
   
-  .grid-item1 img {
+  .grid-item1 img { /* The record disk top right*/
     width: 100%;
     height: 100%;
   }
 
-  .grid-item2 {
-      font-size: 20px; 
+  .grid-item2 { /* We Love Music Text/Image */
+      font-size: 25px; 
   }
 
-  .grid-item3 {
+  .grid-item3 { /* Sign in and Log in texts*/
       font-size: 20px;
       text-align: center;
       grid-column-start: 1;
       grid-column-end: 3;
   }
 
-  .creds {
+  .creds { /* Sign and log*/
     overflow: hidden;
-    height: 100%;
+    height: 150%;
   }
 
-  .creds a {
+  .creds a { /* Controls color and position of sign in and log in*/
     float: right;
     display: block;
     color: black;
@@ -61,7 +61,7 @@
     width: 50%;
   }
 
-  .creds a:hover {
+  .creds a:hover { /* Hover for signin and log */
     background-color: black;
     color: white;
   }
@@ -76,20 +76,20 @@
     text-decoration: none;
   }
 
-  .menu-container ul {
+  .menu-container ul { /* Containter for menu */
       list-style-type: none;
       margin: 0;
       padding: 0;
     }
 
-  .menu-container li {
+  .menu-container li { /* Menu container settings  */
     padding: 10px;
     margin-bottom: 10px;
     background-color: #cd7cdb;
     color: #ffffff;
   }
 
-  .menu-container li:hover {
+  .menu-container li:hover { /* Menu for container*/
     background-color: #9725a5;
   }
 
@@ -103,24 +103,42 @@
   }
 
   .link-container li:hover {
-    background-color: #d1d1d474;
+    background-color: #1ba94a;
   }
 
-  .grid-item5 {
+  .grid-item5 { /* Grid 5 that will contain the song selection container... this is setting the boundaries*/
       grid-column-start: 1;
       grid-column-end: 3;
       text-align: center;  
   }
 
-  .song-container {
+  .song-container { /* Song container that will be a grid*/
       display: grid;
       grid-template-columns: repeat(5, auto);
       grid-template-rows: repeat(2, auto);
       background-color: #7a0d0d;
       padding: 10px;
+      
   }
 
-  .song-item {
+  .song-container a:hover{ /* Hover for song container.... THIS IS WORKING*/
+    background-color: #1bf134;
+  }
+
+  .song-container ul { /*  */
+    list-style-type: none;
+    margin: 30;
+    padding: 30;
+  }
+
+  .song-container li { /*  */
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: #7a0d0d;
+    color: #ffffff;
+  }
+
+  .song-item { /* Within the song container */
       background-color: rgba(255, 255, 255, 0.8);
       border: 1px solid rgba(0, 0, 0, 0.8);
       padding: 20px 15px;
@@ -128,29 +146,12 @@
       text-align: center;
   }
 
-  .song-item img {
-    width: 100px;
-    height: 100px;
+  .song-item img { /* Size of the images within the container */
+    width: 150px;
+    height: 150px;
   }
 
-  .song-container ul {
-    list-style-type: none;
-    margin: 30;
-    padding: 30;
-  }
-
-  .song-container li {
-    padding: 20px;
-    margin-bottom: 10px;
-    background-color: #7a0d0d;
-    color: #ffffff;
-  }
-
-  .song-container li:hover {
-    background-color: #ba9999;
-  }
-
-  .grid-item6 {
+  .grid-item6 {  
       grid-column-start: 1;
       grid-column-end: 3;
       font-size: 20px;
@@ -255,7 +256,7 @@
         </div>
         <div class="grid-item3">
             <div class="creds">
-                <a href="#">Log In</a>
+                <a href="#">Log Off</a>
                 <a href="#">Sign In</a>
             </div>
         </div>
@@ -281,17 +282,17 @@
             <h1>Music Library</h1>
             <div class = "song-container">
 
-                <div class="song-item"><img src="https://m.media-amazon.com/images/I/71ltC5iNaDL._SL1500_.jpg"><br></div>
-                <div class="song-item"><img src="https://i.pinimg.com/originals/57/79/91/57799195bf2814769f27c598bb27e435.jpg"></div>
-                <div class="song-item"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/25247b92-6844-4fef-8ed8-5055cc35bf58/dd1ezh8-09606a23-4406-429b-834d-34d4a0756549.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzI1MjQ3YjkyLTY4NDQtNGZlZi04ZWQ4LTUwNTVjYzM1YmY1OFwvZGQxZXpoOC0wOTYwNmEyMy00NDA2LTQyOWItODM0ZC0zNGQ0YTA3NTY1NDkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.eajVAdp7lBTxH3ewJcDDZ7l9OT-KcYh58r99eTnTkYY"></div>
-                <div class="song-item"><img src="https://upload.wikimedia.org/wikipedia/en/f/f6/Taylor_Swift_-_1989.png"></div>
-                <div class="song-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Beyonc%C3%A9_-_Beyonc%C3%A9.svg/1200px-Beyonc%C3%A9_-_Beyonc%C3%A9.svg.png"></div>
-                <div class="song-item"><img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Khalid_-_American_Teen.png"></div>
-                <div class="song-item"><img src="https://www.highsnobiety.com/static-assets/thumbor/eCKThNCnohixzyYwyHeYMEcJdik=/1600x1067/www.highsnobiety.com/static-assets/wp-content/uploads/2018/09/27124405/kanye-west-yeezus-artwork-controversy-01.jpg"></div>
-                <div class="song-item"><img src="https://upload.wikimedia.org/wikipedia/en/5/56/Lifes_A_Trip.jpg"></div>
-                <div class="song-item"><img src="https://upload.wikimedia.org/wikipedia/en/4/44/Kids_See_Ghosts_Cover.png"></div>
-                <div class="song-item"><img src="https://www.essence.com/wp-content/uploads/2018/08/thrillermj-e1535509182918.jpg"></div>
-
+                <a> <div class="song-item"><img src="https://m.media-amazon.com/images/I/71ltC5iNaDL._SL1500_.jpg"></div>
+                <a> <div class="song-item"><img src="https://i.pinimg.com/originals/57/79/91/57799195bf2814769f27c598bb27e435.jpg"></div>
+                <a> <div class="song-item"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/25247b92-6844-4fef-8ed8-5055cc35bf58/dd1ezh8-09606a23-4406-429b-834d-34d4a0756549.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzI1MjQ3YjkyLTY4NDQtNGZlZi04ZWQ4LTUwNTVjYzM1YmY1OFwvZGQxZXpoOC0wOTYwNmEyMy00NDA2LTQyOWItODM0ZC0zNGQ0YTA3NTY1NDkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.eajVAdp7lBTxH3ewJcDDZ7l9OT-KcYh58r99eTnTkYY"></div>
+                <a> <div class="song-item"><img src="https://upload.wikimedia.org/wikipedia/en/f/f6/Taylor_Swift_-_1989.png"></div>
+                <a> <div class="song-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Beyonc%C3%A9_-_Beyonc%C3%A9.svg/1200px-Beyonc%C3%A9_-_Beyonc%C3%A9.svg.png"></div>
+                <a> <div class="song-item"><img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Khalid_-_American_Teen.png"></div>
+                <a> <div class="song-item"><img src="https://www.highsnobiety.com/static-assets/thumbor/eCKThNCnohixzyYwyHeYMEcJdik=/1600x1067/www.highsnobiety.com/static-assets/wp-content/uploads/2018/09/27124405/kanye-west-yeezus-artwork-controversy-01.jpg"></div>
+                <a> <div class="song-item"><img src="https://upload.wikimedia.org/wikipedia/en/5/56/Lifes_A_Trip.jpg"></div>
+                <a> <div class="song-item"><img src="https://upload.wikimedia.org/wikipedia/en/4/44/Kids_See_Ghosts_Cover.png"></div>
+                <a> <div class="song-item"><img src="https://www.essence.com/wp-content/uploads/2018/08/thrillermj-e1535509182918.jpg"></div>
+            
             </div>
         </div>
         <div class="grid-item6">
