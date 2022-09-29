@@ -18,9 +18,7 @@
   .grid-container {
       display: grid;
       grid-template-columns: 20% 80%;
-      
       background-color: blue;
-      
       max-width: 100vw;
       height: 100%;
   }
@@ -36,7 +34,7 @@
   }
 
   .grid-item2 { /* We Love Music Text/Image */
-      font-size: 25px; 
+      font-size: 20px; 
   }
 
   .grid-item3 { /* Sign in and Log in texts*/
@@ -100,18 +98,12 @@
 
   .link-container li {
     padding: 10px;
-    margin-left: 25%;
-    width: 50%;
     text-align: center;
   }
 
-  .link-container li:hover {
-    background-color: #1ba94a;
-  }
-
   .grid-item5 { /* Grid 5 that will contain the song selection container... this is setting the boundaries*/
-      grid-column-start: 1fr;
-      grid-column-end: 3fr;
+      grid-column-start: 1;
+      grid-column-end: 3;
       text-align: center;  
       height: 80vh;
   }
@@ -131,7 +123,6 @@
     background-color: #7a0d0d;
     height: 90%;
     grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(5, auto);
     overflow: scroll;
     text-align: bottom;
   }
@@ -142,23 +133,19 @@
 
   .song-container ul { /*  */
     list-style-type: none;
-    margin: 30;
-    padding: 30;
   }
 
   .song-container li { /*  */
-    padding: 20px;
-    margin-bottom: 10px;
     background-color: #7a0d0d;
     color: #ffffff;
   }
 
   .song-item { /* Within the song container */
-      background-color: rgba(255, 255, 255, 0.8);
-      border: 1px solid rgba(0, 0, 0, 0.8);
-      padding: auto;
-      font-size: 20px;
-      text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: auto;
+    font-size: 20px;
+    text-align: center;
   }
 
   .song-item img { /* Size of the images within the container */
@@ -167,11 +154,11 @@
   }
 
   .grid-item6 {  
-      grid-column-start: 1;
-      grid-column-end: 3;
-      font-size: 20px;
-      text-align: center;
-      padding: 0 10px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: 20px;
+    text-align: center;
+    padding: 0 10px;
   }
 
   /* For mobile phones: */
@@ -198,7 +185,9 @@
         grid-template-columns: 75px auto 75%;
         grid-template-rows: 10% 80% 10%
     }
-
+    .song-container { 
+      grid-template-columns: repeat(3, auto);
+    }
     .grid-item3 {
         text-align: right;
         padding: 5px 0;
@@ -247,9 +236,8 @@
     }
     .song-container { 
       grid-template-columns: repeat(5, auto);
-      grid-template-rows: repeat(2, auto);
+      grid-template-rows: repeat(3, auto);
     }
-    
   }
 
   
@@ -318,6 +306,8 @@
               <a href="#"><div class="song-item"><figure><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/25247b92-6844-4fef-8ed8-5055cc35bf58/dd1ezh8-09606a23-4406-429b-834d-34d4a0756549.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzI1MjQ3YjkyLTY4NDQtNGZlZi04ZWQ4LTUwNTVjYzM1YmY1OFwvZGQxZXpoOC0wOTYwNmEyMy00NDA2LTQyOWItODM0ZC0zNGQ0YTA3NTY1NDkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.eajVAdp7lBTxH3ewJcDDZ7l9OT-KcYh58r99eTnTkYY"><figcaption<>Mario Kart</figcaption></figure></div></a>
               <a href="#"><div class="song-item"><figure><img src="https://upload.wikimedia.org/wikipedia/en/f/f6/Taylor_Swift_-_1989.png"><figcaption<>Taylor Swift</figcaption></figure></div></a>
               <a href="#"><div class="song-item"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Beyonc%C3%A9_-_Beyonc%C3%A9.svg/1200px-Beyonc%C3%A9_-_Beyonc%C3%A9.svg.png"><figcaption<>Beyonce</figcaption></figure></div></a>
+              
+              <!--FOR LATER
               <a href="#"><div class="song-item"><figure><img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Khalid_-_American_Teen.png"><figcaption<>Khalid</figcaption></figure></div></a>
               <a href="#"><div class="song-item"><figure><img src="https://www.highsnobiety.com/static-assets/thumbor/eCKThNCnohixzyYwyHeYMEcJdik=/1600x1067/www.highsnobiety.com/static-assets/wp-content/uploads/2018/09/27124405/kanye-west-yeezus-artwork-controversy-01.jpg"><figcaption<>Kanye West</figcaption></figure></div></a>
               <a href="#"><div class="song-item"><figure><img src="https://upload.wikimedia.org/wikipedia/en/5/56/Lifes_A_Trip.jpg"><figcaption<>Trippie Redd</figcaption></figure></div></a>
@@ -357,6 +347,7 @@
               <a href="#"><div class="song-item"><figure><img src="https://upload.wikimedia.org/wikipedia/en/4/44/Kids_See_Ghosts_Cover.png"><figcaption<>Ye & Cudi</figcaption></figure></div></a>
               <a href="#"><div class="song-item"><figure><img src="https://www.essence.com/wp-content/uploads/2018/08/thrillermj-e1535509182918.jpg"><figcaption<>Michael Jackson</figcaption></figure></div></a>
 
+            -->
             </div>
         </div>
 
