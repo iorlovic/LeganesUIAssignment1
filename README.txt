@@ -1,3 +1,5 @@
 Current problems:
 
-Box 2 needs top left, center, and bottom right;
+Set image as background?
+Use inspect to look in real time
+Audio controls
