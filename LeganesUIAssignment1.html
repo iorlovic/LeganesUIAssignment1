@@ -144,6 +144,12 @@
     height: 120px;
   }
 
+  figcaption {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
   .grid-item6 {  
     grid-column-start: 1;
     grid-column-end: 3;
@@ -177,7 +183,7 @@
         grid-template-rows: 10% 80% 10%
     }
     .song-container { 
-      grid-template-columns: repeat(3, auto);
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     }
     .grid-item3 {
       text-align: right;
@@ -202,7 +208,6 @@
     }
     .link-container {
       margin-top: 20%;
-      
     }
     .creds a {
       width: auto
@@ -230,7 +235,7 @@
       grid-template-rows: 10% 80% 10%;
     }
     .song-container { 
-      grid-template-columns: repeat(5, auto);
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     }
   }
 
