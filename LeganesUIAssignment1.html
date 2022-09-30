@@ -54,8 +54,15 @@
   }
 
   .grid-item2 { /* We Love Music Text/Image */
-    font-size: 20px; 
     background-color: aliceblue;
+  }
+
+  .title {
+    font-size: 30px;
+    text-align: center;
+    color: rgb(174, 0, 255);
+    vertical-align: middle;
+    line-height: 0.8;
   }
 
   .grid-item3 { /* Sign in and Log in texts*/
@@ -205,6 +212,10 @@
     .song-container { 
       grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     }
+    .title {
+      font-size: 20px;
+      vertical-align: top;
+    }
     .grid-item3 {
       text-align: right;
       padding: 5px 0;
@@ -251,6 +262,9 @@
       grid-template-columns: 75px auto 75%;
       grid-template-rows: 10% 80% 10%;
     }
+    .title {
+      font-size: 27px;
+    }
     .song-container { 
       grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     }
@@ -268,6 +282,7 @@
       alt="Logo">
     </div>
     <div class="grid-item2">
+      <!--
       <p style="margin:0; text-align:left;">
       We
       </p>
@@ -277,12 +292,13 @@
       <p style="margin:0; text-align:right;">
       Music
       </p>
+      -->
+      <div class="title"><p>UI RECORDS</p></div>
     </div>
     <div class="grid-item3">
       <div class="creds">
         <a href="#">Log Off</a>
         <a href="#">Sign In</a>
-        <p style="margin:0; text-align:center; font-size: 50px; color: rgb(174, 0, 255)">WE LOVE MUSIC</p>
       </div>
     </div>
     <div class="grid-item4">
