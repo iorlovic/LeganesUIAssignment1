@@ -5,6 +5,27 @@
     <title> </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+  #header1 {
+    color:rgb(234, 210, 210)8;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: rgb(182, 138, 197);
+    
+  }
+
+  #header2 {
+    font-family: Baskerville;
+    font-size: 30px;
+    color: #9b2eb6;
+    text-shadow: -5px -3px 0 rgb(216, 103, 236), 1px -1px 0 rgb(208, 197, 197), -1px 1px 0 rgb(221, 210, 210), 1px 1px 0 #000;
+  }
+
+  #header3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    color: #9b2eb6;;
+  }
 
   *{
     box-sizing: border-box;
@@ -144,12 +165,6 @@
     height: 120px;
   }
 
-  figcaption {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
   .grid-item6 {  
     grid-column-start: 1;
     grid-column-end: 3;
@@ -179,8 +194,8 @@
     .col-s-12 {width: 100%;}
 
     .grid-container {
-        grid-template-columns: 75px auto 75%;
-        grid-template-rows: 10% 80% 10%
+      grid-template-columns: 75px auto 75%;
+      grid-template-rows: 10% 80% 10%
     }
     .song-container { 
       grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
@@ -204,10 +219,7 @@
       grid-column-end: 4;
     }
     .menu-container ul {
-      margin-bottom: 0;
-    }
-    .link-container {
-      margin-top: 20%;
+      margin-bottom: 200px;
     }
     .creds a {
       width: auto
@@ -237,6 +249,7 @@
     .song-container { 
       grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     }
+    
   }
 
   
@@ -284,40 +297,41 @@
         </div>
     </div>
     <div class="grid-item5">
-      <h1>Music Library</h1>
+      
+      <h1><div id="header2">On Repeat</div></h1>
       <div class = "song-container">
         <!--IMAGES-->
         <!--Template below-->
         <!--<a href="#"><div class="song-item"><figure><img src=""><figcaption>Text</figcaption></figure></div></a>-->
-        <a href="https://www.youtube.com/watch?v=wuJIqmha2Hk"><div class="song-item"><figure><img src="https://m.media-amazon.com/images/I/71ltC5iNaDL._SL1500_.jpg"><figcaption>Mr. Blue Sky</figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=fJ9rUzIMcZQ"><div class="song-item"><figure><img src="https://i.pinimg.com/originals/57/79/91/57799195bf2814769f27c598bb27e435.jpg"><figcaption>Queen II</figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=3CkLMG5NwUg"><div class="song-item"><figure><img src="https://upload.wikimedia.org/wikipedia/en/0/0f/Dangerous_the_Double_Album.jpg"><figcaption>Morgan Wallen</figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=nfWlot6h_JM"><div class="song-item"><figure><img src="https://upload.wikimedia.org/wikipedia/en/f/f6/Taylor_Swift_-_1989.png"><figcaption>Taylor Swift</figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=4m1EFMoRFvY"><div class="song-item"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Beyonc%C3%A9_-_Beyonc%C3%A9.svg/1200px-Beyonc%C3%A9_-_Beyonc%C3%A9.svg.png"><figcaption>Beyonce</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=wuJIqmha2Hk"><div class="song-item" style="background-color:rgb(230, 80, 80)"><figure><img src="https://m.media-amazon.com/images/I/71ltC5iNaDL._SL1500_.jpg"><figcaption>Mr. Blue Sky</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=fJ9rUzIMcZQ"><div class="song-item" style="background-color:rgb(230, 80, 80)"><figure><img src="https://i.pinimg.com/originals/57/79/91/57799195bf2814769f27c598bb27e435.jpg"><figcaption>Queen II</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=3CkLMG5NwUg"><div class="song-item" style="background-color:rgb(230, 80, 80)"><figure><img src="https://upload.wikimedia.org/wikipedia/en/0/0f/Dangerous_the_Double_Album.jpg"><figcaption>Morgan Wallen</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=nfWlot6h_JM"><div class="song-item" style="background-color:rgb(230, 80, 80)"><figure><img src="https://upload.wikimedia.org/wikipedia/en/f/f6/Taylor_Swift_-_1989.png"><figcaption>Taylor Swift</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=4m1EFMoRFvY"><div class="song-item" style="background-color:rgb(230, 80, 80)"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Beyonc%C3%A9_-_Beyonc%C3%A9.svg/1200px-Beyonc%C3%A9_-_Beyonc%C3%A9.svg.png"><figcaption>Beyonce</figcaption></figure></div></a>
         
-        <a href="https://www.youtube.com/watch?v=x3bfa3DZ8JM"><div class="song-item"><figure><img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Khalid_-_American_Teen.png"><figcaption>Khalid</figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=PsO6ZnUZI0g"><div class="song-item"><figure><img src="https://www.highsnobiety.com/static-assets/thumbor/eCKThNCnohixzyYwyHeYMEcJdik=/1600x1067/www.highsnobiety.com/static-assets/wp-content/uploads/2018/09/27124405/kanye-west-yeezus-artwork-controversy-01.jpg"><figcaption>Kanye West</figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=wrvN87l3s08"><div class="song-item"><figure><img src="https://upload.wikimedia.org/wikipedia/en/5/56/Lifes_A_Trip.jpg"><figcaption>Trippie Redd</figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=rnZQvgWhM5s&list=PLLBJrClJPlWJScARaoX_LIw1n3LiPoZZQ"><div class="song-item"><figure><img src="https://upload.wikimedia.org/wikipedia/en/4/44/Kids_See_Ghosts_Cover.png"><figcaption>Ye & Cudi</figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=Zi_XLOBDo_Y"><div class="song-item"><figure><img src="https://www.essence.com/wp-content/uploads/2018/08/thrillermj-e1535509182918.jpg"><figcaption>Michael Jackson</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=x3bfa3DZ8JM"><div class="song-item" style="background-color:rgb(230, 131, 80)"><figure><img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Khalid_-_American_Teen.png"><figcaption>Khalid</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=PsO6ZnUZI0g"><div class="song-item" style="background-color:rgb(230, 131, 80)"><figure><img src="https://www.highsnobiety.com/static-assets/thumbor/eCKThNCnohixzyYwyHeYMEcJdik=/1600x1067/www.highsnobiety.com/static-assets/wp-content/uploads/2018/09/27124405/kanye-west-yeezus-artwork-controversy-01.jpg"><figcaption>Kanye West</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=wrvN87l3s08"><div class="song-item" style="background-color:rgb(230, 131, 80)"><figure><img src="https://upload.wikimedia.org/wikipedia/en/5/56/Lifes_A_Trip.jpg"><figcaption>Trippie Redd</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=rnZQvgWhM5s&list=PLLBJrClJPlWJScARaoX_LIw1n3LiPoZZQ"><div class="song-item" style="background-color:rgb(230, 131, 80)"><figure><img src="https://upload.wikimedia.org/wikipedia/en/4/44/Kids_See_Ghosts_Cover.png"><figcaption>Ye & Cudi</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=Zi_XLOBDo_Y"><div class="song-item" style="background-color:rgb(230, 131, 80)"><figure><img src="https://www.essence.com/wp-content/uploads/2018/08/thrillermj-e1535509182918.jpg"><figcaption>Michael Jackson</figcaption></figure></div></a>
 
-        <a href="https://www.youtube.com/watch?v=Cr8K88UcO0s"><div class="song-item"><figure><img src="https://i0.wp.com/coolhunting.com/wp-content/uploads/2022/05/bad-bunny.jpg?fit=1000%2C1000&ssl=1"><figcaption>Bad Bunny</figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=wycjnCCgUes"><div class="song-item"><figure><img src="https://64.media.tumblr.com/e532c96d01ee622cd5eae6e9e0387331/35402c56aff5eb97-ee/s1280x1920/76165f643cf319487358f5c8d038fb1575b67650.jpg"><figcaption>Tame Impala</figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=w00IDEqfl_Q"><div class="song-item"><figure><img src="https://cdns-images.dzcdn.net/images/cover/18c3440c2701440b58b9c26c3ce7ec3b/500x500.jpg"><figcaption>Alfie Templeman</figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=OSUxrSe5GbI"><div class="song-item"><figure><img src="https://i.scdn.co/image/ab67616d0000b2734d382194384bc6e08eb090f6"><figcaption>Drake</figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=ZAiQP7NPibo"><div class="song-item"><figure><img src="https://i.scdn.co/image/ab67616d0000b2732f5d99957ee95c012b01c5d4"><figcaption>Offset</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=Cr8K88UcO0s"><div class="song-item" style="background-color:rgb(230, 205, 80)"><figure><img src="https://i0.wp.com/coolhunting.com/wp-content/uploads/2022/05/bad-bunny.jpg?fit=1000%2C1000&ssl=1"><figcaption>Bad Bunny</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=wycjnCCgUes"><div class="song-item" style="background-color:rgb(230, 205, 80)"><figure><img src="https://64.media.tumblr.com/e532c96d01ee622cd5eae6e9e0387331/35402c56aff5eb97-ee/s1280x1920/76165f643cf319487358f5c8d038fb1575b67650.jpg"><figcaption>Tame Impala</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=w00IDEqfl_Q"><div class="song-item" style="background-color:rgb(230, 205, 80)"><figure><img src="https://cdns-images.dzcdn.net/images/cover/18c3440c2701440b58b9c26c3ce7ec3b/500x500.jpg"><figcaption>Alfie Templeman</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=OSUxrSe5GbI"><div class="song-item" style="background-color:rgb(230, 205, 80)"><figure><img src="https://i.scdn.co/image/ab67616d0000b2734d382194384bc6e08eb090f6"><figcaption>Drake</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=ZAiQP7NPibo"><div class="song-item" style="background-color:rgb(230, 205, 80)"><figure><img src="https://i.scdn.co/image/ab67616d0000b2732f5d99957ee95c012b01c5d4"><figcaption>Offset</figcaption></figure></div></a>
 
-        <a href="https://www.youtube.com/watch?v=WrsFXgQk5UI"><div class="song-item"><figure><img src="https://i.pinimg.com/originals/77/77/f7/7777f78b0beb87866766ca87ee6592b4.jpg"><figcaption>Lil Uzi Vert</figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=wXhTHyIgQ_U"><div class="song-item"><figure><img src="https://bloximages.newyork1.vip.townnews.com/dailynebraskan.com/content/tncms/assets/v3/editorial/f/98/f980399a-d299-11e9-a670-d3964076fe5f/5d759f4b36a7d.image.jpg"><figcaption>Post Malone</figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=w4tzZ47mDZQ"><div class="song-item"><figure><img src="https://cdn.shopify.com/s/files/1/0513/0613/5747/products/Album-PopSmokeMakeItRainFeaturingRowdyRebel_530x@2x.jpg?v=1610648447"><figcaption>Pop Smoke</figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=tQ0yjYUFKAE"><div class="song-item"><figure><img src="https://www.gannett-cdn.com/presto/2021/03/18/PIND/81c53026-e263-45dd-9c7a-1541d67c398d-bieber_album_cover.jpg?width=660&height=660&fit=crop&format=pjpg&auto=webp"><figcaption>Justin Bieber</figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=LjxulQ1bEWg"><div class="song-item"><figure><img src="https://upload.wikimedia.org/wikipedia/en/a/ab/Tyga_Careless_World_Cover.png"><figcaption>Tyga</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=WrsFXgQk5UI"><div class="song-item" style="background-color:rgb(153, 230, 80)"><figure><img src="https://i.pinimg.com/originals/77/77/f7/7777f78b0beb87866766ca87ee6592b4.jpg"><figcaption>Lil Uzi Vert</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=wXhTHyIgQ_U"><div class="song-item" style="background-color:rgb(153, 230, 80)"><figure><img src="https://bloximages.newyork1.vip.townnews.com/dailynebraskan.com/content/tncms/assets/v3/editorial/f/98/f980399a-d299-11e9-a670-d3964076fe5f/5d759f4b36a7d.image.jpg"><figcaption>Post Malone</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=w4tzZ47mDZQ"><div class="song-item" style="background-color:rgb(153, 230, 80)"><figure><img src="https://cdn.shopify.com/s/files/1/0513/0613/5747/products/Album-PopSmokeMakeItRainFeaturingRowdyRebel_530x@2x.jpg?v=1610648447"><figcaption>Pop Smoke</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=tQ0yjYUFKAE"><div class="song-item" style="background-color:rgb(153, 230, 80)"><figure><img src="https://www.gannett-cdn.com/presto/2021/03/18/PIND/81c53026-e263-45dd-9c7a-1541d67c398d-bieber_album_cover.jpg?width=660&height=660&fit=crop&format=pjpg&auto=webp"><figcaption>Justin Bieber</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=LjxulQ1bEWg"><div class="song-item" style="background-color:rgb(153, 230, 80)"><figure><img src="https://upload.wikimedia.org/wikipedia/en/a/ab/Tyga_Careless_World_Cover.png"><figcaption>Tyga</figcaption></figure></div></a>
         
-        <a href="https://www.youtube.com/watch?v=nCg3ufihKyU"><div class="song-item"><figure><img src="https://m.media-amazon.com/images/I/51Rbxus7-bL._SX466_.jpg"><figcaption>Tiesto</figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=NUVCQXMUVnI"><div class="song-item"><figure><img src="https://upload.wikimedia.org/wikipedia/en/4/42/David_Guetta_-_Nothing_but_the_Beat.png"><figcaption>David Guetta</figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=HIwAI05Y1fU"><div class="song-item"><figure><img src="https://images.complex.com/complex/images/c_fill,dpr_auto,f_auto,q_90,w_1400/fl_lossy,pg_1/vwzklxgrg5fr3hrw59yg/jack-harlow"><figcaption>Jack Harlow</figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=wzMrK-aGCug"><div class="song-item"><figure><img src="https://upload.wikimedia.org/wikipedia/en/4/41/SremmLife_cover.jpg"><figcaption>Rae Sremmurd</figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=l0U7SxXHkPY"><div class="song-item"><figure><img src="https://www.okayplayer.com/wp-content/uploads/2020/05/future-drops-new-album-high-off-life-featuring-drake-travis-scott-young-thug-meek-mill-and-more.jpg"><figcaption>Future</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=nCg3ufihKyU"><div class="song-item" style="background-color:rgb(80, 230, 218)"><figure><img src="https://m.media-amazon.com/images/I/51Rbxus7-bL._SX466_.jpg"><figcaption>Tiesto</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=NUVCQXMUVnI"><div class="song-item" style="background-color:rgb(80, 230, 218)"><figure><img src="https://upload.wikimedia.org/wikipedia/en/4/42/David_Guetta_-_Nothing_but_the_Beat.png"><figcaption>David Guetta</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=HIwAI05Y1fU"><div class="song-item" style="background-color:rgb(80, 230, 218)"><figure><img src="https://images.complex.com/complex/images/c_fill,dpr_auto,f_auto,q_90,w_1400/fl_lossy,pg_1/vwzklxgrg5fr3hrw59yg/jack-harlow"><figcaption>Jack Harlow</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=wzMrK-aGCug"><div class="song-item" style="background-color:rgb(80, 230, 218)"><figure><img src="https://upload.wikimedia.org/wikipedia/en/4/41/SremmLife_cover.jpg"><figcaption>Rae Sremmurd</figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=l0U7SxXHkPY"><div class="song-item" style="background-color:rgb(80, 230, 218)"><figure><img src="https://www.okayplayer.com/wp-content/uploads/2020/05/future-drops-new-album-high-off-life-featuring-drake-travis-scott-young-thug-meek-mill-and-more.jpg"><figcaption>Future</figcaption></figure></div></a>
       
       </div>
     </div>
