@@ -22,7 +22,7 @@
         .col-s-11 {width: 91.66%;}
         .col-s-12 {width: 100%;}
 
-        .logInBox {
+        .signUpBox {
             text-align: center;
             vertical-align: center;
             margin: 12.5% auto;
@@ -51,15 +51,26 @@
 
 <body>
     
-    <div class="logInBox col-s-8 col-6"> <fieldset>
-        <h1>Log in to UI Records!</h1>
+    <div class="signUpBox col-s-8 col-6"> <fieldset>
+        <h1>Sign up for UI Records!</h1>
         <form action="" method="post">
-            <label for="user">Username:</label><br>
+            <h3>Account Information:</h3>
+            <label for="user">Username:</label>
             <input type="text" id="user" name="user" value="EX: MusicLover7"><br><br>
-            <label for="password">Password:</label><br>
-            <input type="text" id="password" name="password" value="XXXXXXXX"><br><br><br>
-            <input type="submit" value="Submit"> or
-            <a href="#">Log in with Facebook here</a>
+            <label for="password">Password:</label>
+            <input type="text" id="password" name="password" value="XXXXXXXX"><br>
+            <h3>Personal Information:</h3>
+            
+            <label for="name">First Name:</label>
+            <input type="text" id="name" name="name" value="EX: Joe"><br><br>
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" value="EX: Jones"><br><br>
+            <label for="dob">Date of Birth:</label>
+            <input type="text" id="dob" name="dob" value="EX: 12/05/1999"><br><br>
+            <label for="pfp">Profile Image:</label> (button here)
+            <br><br>
+            <input style="float: right" type="submit" value="Submit">
+            
         </form> 
     </fieldset> </div> 
     
