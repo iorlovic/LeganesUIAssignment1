@@ -9,7 +9,12 @@ function LoggedIn(loggedIn) {
     }
 }
 
-LoggedIn(false);
+function createNewAccount() {
+    setCookie(user, document.getElementById("user"));
+    console.log(document.getElementById("user"));
+    console.log(getCookie(user));
+    setCookie(password, document.getElementById("password"));
+}
 
 function setCookie(cName, cValue){
     document.cookie = cName + "=" + cValue +";path=/";
@@ -35,4 +40,12 @@ function getCookie(cName) {
         }
     }
     return "";
+}
+
+function validateForm() {
+    if(true) {
+        createNewAccount();
+        return true;
+    }
+    return false;
 }
