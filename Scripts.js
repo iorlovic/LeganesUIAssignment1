@@ -1,4 +1,5 @@
 const WELCOMEMESSAGE = document.getElementById("logInMessage");
+var user = getCookie("user");
 
 function LoggedIn(loggedIn) {
     if (loggedIn) {
@@ -10,10 +11,9 @@ function LoggedIn(loggedIn) {
 }
 
 function createNewAccount() {
-    setCookie(user, document.getElementById("user"));
+    setCookie("user", document.getElementById("user"));
     console.log(document.getElementById("user"));
-    console.log(getCookie(user));
-    setCookie(password, document.getElementById("password"));
+    console.log(getCookie("user"));
 }
 
 function setCookie(cName, cValue){
@@ -32,7 +32,7 @@ function getCookie(cName) {
         let c = charArray[i];
         
         //
-        while (c.charAt(0) == ''){
+        while (c.charAt(0) == ' '){
             c = c.substring(1);
         }
         if (c.indexOf(name)==0) {
