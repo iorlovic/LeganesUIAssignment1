@@ -25,7 +25,7 @@ function getCookie(cName) {
 
     //can handle cookies with special chars
     let decodedCookie = decodeURIComponent(document.cookie);
-    let charArray = document.cookie.split(';');
+    let charArray = decodedCookie.split(';');
     
     //iterates through char array of each cookie string
     for (let i = 0; i < charArray.length; i++){
@@ -40,6 +40,10 @@ function getCookie(cName) {
         }
     }
     return "";
+}
+
+function checkCookie() {
+
 }
 
 function validateForm() {
