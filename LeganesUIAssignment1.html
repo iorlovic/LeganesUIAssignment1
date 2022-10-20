@@ -39,7 +39,7 @@
   .grid-container {
     display: grid;
     grid-template-columns: 20% 80%;
-    background-color: rgb(212, 212, 235);
+    background-color: #363636;
     max-width: 100vw;
     height: 100%;
   }
@@ -51,16 +51,17 @@
   .grid-item1 img { /* The record disk top left*/
     width: 100%;
     height: 100%;
+    background-color: #212121;
   }
 
   .grid-item2 { /* UI Records */
-    background-color: aliceblue;
+    background-color: #212121;
   }
 
   .title { /*UI RECORDS TOP left*/
     font-size: 30px;
     text-align: center;
-    color: rgb(174, 0, 255);
+    color: #9b2eb6;
     vertical-align: middle;
     line-height: 0.8;
   }
@@ -70,7 +71,7 @@
     text-align: center;
     grid-column-start: 1;
     grid-column-end: 3;
-    background-color: aliceblue;
+    background-color: #212121;
   }
 
   .creds { /* Sign and log*/
@@ -81,7 +82,7 @@
   .creds a { /* Controls color and position of sign in and log in*/
     float: right;
     display: block;
-    color: black;
+    color: white;
     text-align: center;
     padding: 10px 15px;
     text-decoration: none;
@@ -89,7 +90,7 @@
   }
 
   .creds a:hover { /* Hover for signin and log */
-    background-color: black;
+    background-color: #9b2eb6;
     color: white;
   }
 
@@ -98,11 +99,13 @@
     grid-column-end: 3;
     text-align: center;
     /*background-color: rgb(224, 86, 189); */
-    background-color: rgb(94,53,88);
+    background-color: #212121;
+    color: #9b2eb6;
   }
 
   .grid-item4 a {
     text-decoration: none;
+    color: white;
   }
 
   .menu-container ul { /* Containter for menu */
@@ -114,13 +117,14 @@
   .menu-container li { /* Menu container settings  */
     padding: 10px;
     margin-bottom: 10px;
-    background-color: #f093d6;
-    color: #6a0768;
+    background-color: #363636;
+    color: white;
   }
 
   .menu-container li:hover { /* Menu for container*/
-    background-color: #ae33a0;
+    background-color: #9b2eb6;
   }
+
 
   .link-container ul {
     list-style-type: none;
@@ -137,12 +141,12 @@
     grid-column-end: 3;
     text-align: center;  
     height: 80vh;
-    background-color: black;
+    background-color: #363636;
   }
 
   .song-container { /* Song container that will be a grid*/
     display: grid;
-    background-color: #7a0d0d;
+    background-color: #363636;
     height: 90%;
     grid-template-columns: repeat(2, auto);
     /*grid-template-rows: repeat(5, auto);*/
@@ -169,6 +173,13 @@
     height: 80%;
   }
 
+  figcaption {
+  color: #9b2eb6;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #9b2eb6;
+}
+
   #playButton{ /* Play button that will play a sound when clicked on*/ 
     width: 150px;
     height: 75px;
@@ -180,7 +191,7 @@
     font-size: 20px;
     text-align: center;
     padding: 0 10px;
-    background-color: black;
+    background-color:#212121;
     color: white;
   }
 
@@ -301,8 +312,8 @@
         <div class="menu-container">
           <ul>
           <a href="#"><li>Main Menu</li></a>
-          <a href="#"><li></li></a>
-          <a href="#"><li></li></a>
+          <a href="#"><li>Top Charts</li></a>
+          <a href="#"><li>Your </li></a>
           <a href="CreatePlaylistScreen.html"><li>Create Playlist</li></a>
           </ul>
         </div>
@@ -326,59 +337,59 @@
        
        
         
-        <a href="https://www.youtube.com/watch?v=wuJIqmha2Hk"><div class="song-item"><figure><img src="https://m.media-amazon.com/images/I/71ltC5iNaDL._SL1500_.jpg"><figcaption>Mr. Blue Sky <audio id="playButton" controls>
+        <a href="https://www.youtube.com/watch?v=wuJIqmha2Hk"><div class="song-item" style="background-color:#363636"><figure><img src="https://m.media-amazon.com/images/I/71ltC5iNaDL._SL1500_.jpg"><figcaption>Mr. Blue Sky <audio id="playButton" controls>
           <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=fJ9rUzIMcZQ"><div class="song-item"><figure><img src="https://i.pinimg.com/originals/57/79/91/57799195bf2814769f27c598bb27e435.jpg"><figcaption>Queen II <audio id="playButton" controls>
+        <a href="https://www.youtube.com/watch?v=fJ9rUzIMcZQ"><div class="song-item" style="background-color:#363636"><figure><img src="https://i.pinimg.com/originals/57/79/91/57799195bf2814769f27c598bb27e435.jpg"><figcaption>Queen II <audio id="playButton" controls>
           <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=3CkLMG5NwUg"><div class="song-item"><figure><img src="https://upload.wikimedia.org/wikipedia/en/0/0f/Dangerous_the_Double_Album.jpg"><figcaption>Morgan Wallen <audio id="playButton" controls>
+        <a href="https://www.youtube.com/watch?v=3CkLMG5NwUg"><div class="song-item" style="background-color:#363636"><figure><img src="https://upload.wikimedia.org/wikipedia/en/0/0f/Dangerous_the_Double_Album.jpg"><figcaption>Morgan Wallen <audio id="playButton" controls>
           <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=nfWlot6h_JM"><div class="song-item"><figure><img src="https://upload.wikimedia.org/wikipedia/en/f/f6/Taylor_Swift_-_1989.png"><figcaption>Taylor Swift <audio id="playButton" controls>
+        <a href="https://www.youtube.com/watch?v=nfWlot6h_JM"><div class="song-item" style="background-color:#363636"><figure><img src="https://upload.wikimedia.org/wikipedia/en/f/f6/Taylor_Swift_-_1989.png"><figcaption>Taylor Swift <audio id="playButton" controls>
           <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=4m1EFMoRFvY"><div class="song-item"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Beyonc%C3%A9_-_Beyonc%C3%A9.svg/1200px-Beyonc%C3%A9_-_Beyonc%C3%A9.svg.png"><figcaption>Beyonce <audio id="playButton" controls>
-          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        
-        <a href="https://www.youtube.com/watch?v=x3bfa3DZ8JM"><div class="song-item" style="background-color:rgb(230, 131, 80)"><figure><img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Khalid_-_American_Teen.png"><figcaption>Khalid <audio id="playButton" controls>
-          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=PsO6ZnUZI0g"><div class="song-item" style="background-color:rgb(230, 131, 80)"><figure><img src="https://cdns-images.dzcdn.net/images/cover/5a56530f7906bd9786fa47bd0be421b3/500x500.jpg"><figcaption>Kanye West <audio id="playButton" controls>
-          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=wrvN87l3s08"><div class="song-item" style="background-color:rgb(230, 131, 80)"><figure><img src="https://upload.wikimedia.org/wikipedia/en/5/56/Lifes_A_Trip.jpg"><figcaption>Trippie Redd <audio id="playButton" controls>
-          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=rnZQvgWhM5s&list=PLLBJrClJPlWJScARaoX_LIw1n3LiPoZZQ"><div class="song-item" style="background-color:rgb(230, 131, 80)"><figure><img src="https://upload.wikimedia.org/wikipedia/en/4/44/Kids_See_Ghosts_Cover.png"><figcaption>Ye & Cudi <audio id="playButton" controls>
-          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=Zi_XLOBDo_Y"><div class="song-item" style="background-color:rgb(230, 131, 80)"><figure><img src="https://www.essence.com/wp-content/uploads/2018/08/thrillermj-e1535509182918.jpg"><figcaption>Michael Jackson <audio id="playButton" controls>
-          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-
-        <a href="https://www.youtube.com/watch?v=Cr8K88UcO0s"><div class="song-item" style="background-color:rgb(230, 205, 80)"><figure><img src="https://i0.wp.com/coolhunting.com/wp-content/uploads/2022/05/bad-bunny.jpg?fit=1000%2C1000&ssl=1"><figcaption>Bad Bunny <audio id="playButton" controls>
-          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=wycjnCCgUes"><div class="song-item" style="background-color:rgb(230, 205, 80)"><figure><img src="https://64.media.tumblr.com/e532c96d01ee622cd5eae6e9e0387331/35402c56aff5eb97-ee/s1280x1920/76165f643cf319487358f5c8d038fb1575b67650.jpg"><figcaption>Tame Impala <audio id="playButton" controls>
-          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=w00IDEqfl_Q"><div class="song-item" style="background-color:rgb(230, 205, 80)"><figure><img src="https://cdns-images.dzcdn.net/images/cover/18c3440c2701440b58b9c26c3ce7ec3b/500x500.jpg"><figcaption>Alfie Templeman <audio id="playButton" controls>
-          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=OSUxrSe5GbI"><div class="song-item" style="background-color:rgb(230, 205, 80)"><figure><img src="https://i.scdn.co/image/ab67616d0000b2734d382194384bc6e08eb090f6"><figcaption>Drake <audio id="playButton" controls>
-          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=ZAiQP7NPibo"><div class="song-item" style="background-color:rgb(230, 205, 80)"><figure><img src="https://i.scdn.co/image/ab67616d0000b2732f5d99957ee95c012b01c5d4"><figcaption>Offset <audio id="playButton" controls>
-          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-
-        <a href="https://www.youtube.com/watch?v=WrsFXgQk5UI"><div class="song-item" style="background-color:rgb(153, 230, 80)"><figure><img src="https://i.pinimg.com/originals/77/77/f7/7777f78b0beb87866766ca87ee6592b4.jpg"><figcaption>Lil Uzi Vert <audio id="playButton" controls>
-          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=wXhTHyIgQ_U"><div class="song-item" style="background-color:rgb(153, 230, 80)"><figure><img src="https://bloximages.newyork1.vip.townnews.com/dailynebraskan.com/content/tncms/assets/v3/editorial/f/98/f980399a-d299-11e9-a670-d3964076fe5f/5d759f4b36a7d.image.jpg"><figcaption>Post Malone <audio id="playButton" controls>
-          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=w4tzZ47mDZQ"><div class="song-item" style="background-color:rgb(153, 230, 80)"><figure><img src="https://cdn.shopify.com/s/files/1/0513/0613/5747/products/Album-PopSmokeMakeItRainFeaturingRowdyRebel_530x@2x.jpg?v=1610648447"><figcaption>Pop Smoke <audio id="playButton" controls>
-          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=tQ0yjYUFKAE"><div class="song-item" style="background-color:rgb(153, 230, 80)"><figure><img src="https://www.gannett-cdn.com/presto/2021/03/18/PIND/81c53026-e263-45dd-9c7a-1541d67c398d-bieber_album_cover.jpg?width=660&height=660&fit=crop&format=pjpg&auto=webp"><figcaption>Justin Bieber <audio id="playButton" controls>
-          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=LjxulQ1bEWg"><div class="song-item" style="background-color:rgb(153, 230, 80)"><figure><img src="https://upload.wikimedia.org/wikipedia/en/a/ab/Tyga_Careless_World_Cover.png"><figcaption>Tyga <audio id="playButton" controls>
+        <a href="https://www.youtube.com/watch?v=4m1EFMoRFvY"><div class="song-item" style="background-color:#363636"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Beyonc%C3%A9_-_Beyonc%C3%A9.svg/1200px-Beyonc%C3%A9_-_Beyonc%C3%A9.svg.png"><figcaption>Beyonce <audio id="playButton" controls>
           <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
         
-        <a href="https://www.youtube.com/watch?v=nCg3ufihKyU"><div class="song-item" style="background-color:rgb(80, 230, 218)"><figure><img src="https://m.media-amazon.com/images/I/51Rbxus7-bL._SX466_.jpg"><figcaption>Tiesto <audio id="playButton" controls>
+        <a href="https://www.youtube.com/watch?v=x3bfa3DZ8JM"><div class="song-item" style="background-color:#363636"><figure><img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Khalid_-_American_Teen.png"><figcaption>Khalid <audio id="playButton" controls>
           <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=NUVCQXMUVnI"><div class="song-item" style="background-color:rgb(80, 230, 218)"><figure><img src="https://upload.wikimedia.org/wikipedia/en/4/42/David_Guetta_-_Nothing_but_the_Beat.png"><figcaption>David Guetta <audio id="playButton" controls>
+        <a href="https://www.youtube.com/watch?v=PsO6ZnUZI0g"><div class="song-item" style="background-color:#363636"><figure><img src="https://cdns-images.dzcdn.net/images/cover/5a56530f7906bd9786fa47bd0be421b3/500x500.jpg"><figcaption>Kanye West <audio id="playButton" controls>
           <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=HIwAI05Y1fU"><div class="song-item" style="background-color:rgb(80, 230, 218)"><figure><img src="https://images.complex.com/complex/images/c_fill,dpr_auto,f_auto,q_90,w_1400/fl_lossy,pg_1/vwzklxgrg5fr3hrw59yg/jack-harlow"><figcaption>Jack Harlow <audio id="playButton" controls>
+        <a href="https://www.youtube.com/watch?v=wrvN87l3s08"><div class="song-item" style="background-color:#363636"><figure><img src="https://upload.wikimedia.org/wikipedia/en/5/56/Lifes_A_Trip.jpg"><figcaption>Trippie Redd <audio id="playButton" controls>
           <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=wzMrK-aGCug"><div class="song-item" style="background-color:rgb(80, 230, 218)"><figure><img src="https://upload.wikimedia.org/wikipedia/en/4/41/SremmLife_cover.jpg"><figcaption>Rae Sremmurd <audio id="playButton" controls>
+        <a href="https://www.youtube.com/watch?v=rnZQvgWhM5s&list=PLLBJrClJPlWJScARaoX_LIw1n3LiPoZZQ"><div class="song-item" style="background-color:#363636"><figure><img src="https://upload.wikimedia.org/wikipedia/en/4/44/Kids_See_Ghosts_Cover.png"><figcaption>Ye & Cudi <audio id="playButton" controls>
           <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=l0U7SxXHkPY"><div class="song-item" style="background-color:rgb(80, 230, 218)"><figure><img src="https://www.okayplayer.com/wp-content/uploads/2020/05/future-drops-new-album-high-off-life-featuring-drake-travis-scott-young-thug-meek-mill-and-more.jpg"><figcaption>Future <audio id="playButton" controls>
+        <a href="https://www.youtube.com/watch?v=Zi_XLOBDo_Y"><div class="song-item" style="background-color:#363636"><figure><img src="https://www.essence.com/wp-content/uploads/2018/08/thrillermj-e1535509182918.jpg"><figcaption>Michael Jackson <audio id="playButton" controls>
+          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
+
+        <a href="https://www.youtube.com/watch?v=Cr8K88UcO0s"><div class="song-item" style="background-color:#363636"><figure><img src="https://i0.wp.com/coolhunting.com/wp-content/uploads/2022/05/bad-bunny.jpg?fit=1000%2C1000&ssl=1"><figcaption>Bad Bunny <audio id="playButton" controls>
+          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=wycjnCCgUes"><div class="song-item" style="background-color:#363636"><figure><img src="https://64.media.tumblr.com/e532c96d01ee622cd5eae6e9e0387331/35402c56aff5eb97-ee/s1280x1920/76165f643cf319487358f5c8d038fb1575b67650.jpg"><figcaption>Tame Impala <audio id="playButton" controls>
+          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=w00IDEqfl_Q"><div class="song-item" style="background-color:#363636"><figure><img src="https://cdns-images.dzcdn.net/images/cover/18c3440c2701440b58b9c26c3ce7ec3b/500x500.jpg"><figcaption>Alfie Templeman <audio id="playButton" controls>
+          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=OSUxrSe5GbI"><div class="song-item" style="background-color:#363636"><figure><img src="https://i.scdn.co/image/ab67616d0000b2734d382194384bc6e08eb090f6"><figcaption>Drake <audio id="playButton" controls>
+          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=ZAiQP7NPibo"><div class="song-item" style="background-color:#363636"><figure><img src="https://i.scdn.co/image/ab67616d0000b2732f5d99957ee95c012b01c5d4"><figcaption>Offset <audio id="playButton" controls>
+          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
+
+        <a href="https://www.youtube.com/watch?v=WrsFXgQk5UI"><div class="song-item" style="background-color:#363636"><figure><img src="https://i.pinimg.com/originals/77/77/f7/7777f78b0beb87866766ca87ee6592b4.jpg"><figcaption>Lil Uzi Vert <audio id="playButton" controls>
+          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=wXhTHyIgQ_U"><div class="song-item" style="background-color:#363636"><figure><img src="https://bloximages.newyork1.vip.townnews.com/dailynebraskan.com/content/tncms/assets/v3/editorial/f/98/f980399a-d299-11e9-a670-d3964076fe5f/5d759f4b36a7d.image.jpg"><figcaption>Post Malone <audio id="playButton" controls>
+          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=w4tzZ47mDZQ"><div class="song-item" style="background-color:#363636"><figure><img src="https://cdn.shopify.com/s/files/1/0513/0613/5747/products/Album-PopSmokeMakeItRainFeaturingRowdyRebel_530x@2x.jpg?v=1610648447"><figcaption>Pop Smoke <audio id="playButton" controls>
+          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=tQ0yjYUFKAE"><div class="song-item" style="background-color:#363636"><figure><img src="https://www.gannett-cdn.com/presto/2021/03/18/PIND/81c53026-e263-45dd-9c7a-1541d67c398d-bieber_album_cover.jpg?width=660&height=660&fit=crop&format=pjpg&auto=webp"><figcaption>Justin Bieber <audio id="playButton" controls>
+          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=LjxulQ1bEWg"><div class="song-item" style="background-color:#363636"><figure><img src="https://upload.wikimedia.org/wikipedia/en/a/ab/Tyga_Careless_World_Cover.png"><figcaption>Tyga <audio id="playButton" controls>
+          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
+        
+        <a href="https://www.youtube.com/watch?v=nCg3ufihKyU"><div class="song-item" style="background-color:#363636"><figure><img src="https://m.media-amazon.com/images/I/51Rbxus7-bL._SX466_.jpg"><figcaption>Tiesto <audio id="playButton" controls>
+          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=NUVCQXMUVnI"><div class="song-item" style="background-color:#363636"><figure><img src="https://upload.wikimedia.org/wikipedia/en/4/42/David_Guetta_-_Nothing_but_the_Beat.png"><figcaption>David Guetta <audio id="playButton" controls>
+          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=HIwAI05Y1fU"><div class="song-item" style="background-color:#363636"><figure><img src="https://images.complex.com/complex/images/c_fill,dpr_auto,f_auto,q_90,w_1400/fl_lossy,pg_1/vwzklxgrg5fr3hrw59yg/jack-harlow"><figcaption>Jack Harlow <audio id="playButton" controls>
+          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=wzMrK-aGCug"><div class="song-item" style="background-color:#363636"><figure><img src="https://upload.wikimedia.org/wikipedia/en/4/41/SremmLife_cover.jpg"><figcaption>Rae Sremmurd <audio id="playButton" controls>
+          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
+        <a href="https://www.youtube.com/watch?v=l0U7SxXHkPY"><div class="song-item" style="background-color:#363636"><figure><img src="https://www.okayplayer.com/wp-content/uploads/2020/05/future-drops-new-album-high-off-life-featuring-drake-travis-scott-young-thug-meek-mill-and-more.jpg"><figcaption>Future <audio id="playButton" controls>
           <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
 
       </div>
