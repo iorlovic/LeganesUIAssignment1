@@ -1,8 +1,7 @@
-const WELCOMEMESSAGE = document.getElementById("logInMessage");
-var user = getCookie("user");
 
-function LoggedIn(loggedIn) {
-    if (loggedIn) {
+
+function isLoggedIn() {
+    if (checkCookie("user")) {
         WELCOMEMESSAGE.innerHTML = "";
     }
     else {
@@ -11,13 +10,17 @@ function LoggedIn(loggedIn) {
 }
 
 function createNewAccount() {
-    setCookie("user", document.getElementById("user"));
-    console.log(document.getElementById("user"));
+    console.log(getCookie("user"));
+    setCookie("user", document.getElementById("user").value, 1);
+    console.log(document.getElementById("user").value);
     console.log(getCookie("user"));
 }
 
-function setCookie(cName, cValue){
-    document.cookie = cName + "=" + cValue +";path=/";
+function setCookie(cName, cValue, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days*24*60*60*1000));
+    let expires = "expires="+ date.toUTCString();
+    document.cookie = cName + "=" + cValue + ";" + expires + ";path=/";
 }
 
 function getCookie(cName) {
@@ -42,8 +45,11 @@ function getCookie(cName) {
     return "";
 }
 
-function checkCookie() {
-
+function checkCookie(cName) {
+    if (getCookie(cName) != "") {
+        return true;
+    }
+    return false;
 }
 
 function validateForm() {
