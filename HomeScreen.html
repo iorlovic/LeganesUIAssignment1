@@ -281,10 +281,6 @@
 
 
 <body>
-  <script src="Scripts.js">
-    var WELCOMEMESSAGE = document.getElementById("logInMessage");
-    isLoggedIn();
-  </script>
 
   <div class="grid-container">
     <div class="grid-item1">
@@ -306,7 +302,8 @@
       <div class="title"><p>UI RECORDS</p></div>
     </div>
     <div class="grid-item3">
-      <div class="creds">
+      
+      <div class="creds" id="creds">
         <a href="LogInScreen.html" target="_blank">Log In</a>
         <a href="SignUpScreen.html" target="_blank">Sign Up</a>
       </div>
@@ -320,7 +317,7 @@
           <a href="#"><li>Main Menu</li></a>
           <a href="#"><li>Today's Top Artist</li></a>
           <a href="#"><li>Favorites</li></a>
-          <a href="CreatePlaylistScreen.html"><li>Create Playlist</li></a>
+          <a href="CreatePlaylistScreen.html" target="_blank"><li>Create Playlist</li></a>
           </ul>
         </div>
         <div class="link-container">
@@ -339,9 +336,6 @@
         <!--IMAGES-->
         <!--Template below-->
         <!--<a href="#"><div class="song-item"><figure><img src=""><figcaption>Text</figcaption></figure></div></a>-->
-
-       
-       
         
         <a href="https://www.youtube.com/watch?v=wuJIqmha2Hk"><div class="song-item" style="background-color:#363636"><figure><img src="https://m.media-amazon.com/images/I/71ltC5iNaDL._SL1500_.jpg"><figcaption>Mr. Blue Sky <audio id="playButton" controls>
           <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
@@ -407,10 +401,14 @@
       </p>
     </div>
 
-    <!--<script src="Scripts.js"></script>-->
-    <script src="Scripts.js"></script>
-
   </div>
+
+  <script src="Scripts.js"></script>
+  <script>
+    console.log("Home screen opened");
+    isLoggedIn();
+  </script>
+
 </body>
 
 </html>
