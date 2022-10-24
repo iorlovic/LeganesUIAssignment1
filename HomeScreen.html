@@ -72,6 +72,7 @@
     grid-column-start: 1;
     grid-column-end: 3;
     background-color: #212121;
+    height: 75px;
   }
 
   .creds { /* Sign and log*/
@@ -84,9 +85,11 @@
     display: block;
     color: white;
     text-align: center;
-    padding: 10px 15px;
     text-decoration: none;
     width: 50%;
+    height: 100%;
+    padding: 25px 0;
+    border: 1px solid rgba(0, 0, 0, 0.8);
   }
 
   .creds a:hover { /* Hover for signin and log */
@@ -94,20 +97,24 @@
     color: white;
   }
 
-  /* Drop button style */
+ /* Drop button style */
   .dropButton{
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
     border: none;
+    padding: 0;
+    height: 100%;
   }
 
   /* Styling entire dropdown */
   .dropdown {
+    height: 100%;
     position: relative;
     display: inline-block;
-    margin: 5px 10px;
+    width: 25%;
+  }
+
+  .dropdown img {
+    width: 100%;
+    height: 100%;
   }
 
   /* Hide content initially */
@@ -115,6 +122,7 @@
     display: none;
     position: absolute;
     background-color: #f9f9f9;
+    max-width: 100%;
     z-index: 1;
   }
 
@@ -258,7 +266,7 @@
 
     .grid-container {
       grid-template-columns: 75px auto 75%;
-      grid-template-rows: 10% 80% 10%
+      grid-template-rows: 75px 80% auto
     }
     .song-container { 
       grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
@@ -269,12 +277,26 @@
     }
     .grid-item3 {
       text-align: right;
-      padding: 5px 0;
       grid-column-start: 3;
       grid-column-end: 4;
     }
     .creds a {
-      width: auto
+      width: auto;
+      height: 100%;
+      padding: 25px 15px;
+    }
+    .dropdown {
+      width: 75px;
+      height: 75px;
+    }
+    .dropButton {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+    }
+    .dropdown img {
+      width: 100%;
+      height: 100%;
     }
     .grid-item4 {
       grid-column-start: 1;
@@ -332,17 +354,17 @@
       <div class="title"><p>UI RECORDS</p></div>
     </div>
     <div class="grid-item3">
-      <div class="dropdown" id="drop">
-        <button class="dropButton" id="pfp" hidden>Dropdown</button>
-        <div class="dropContent">
+      <div class="creds" id="creds">
+        <a href="LogInScreen.html" target="_parent">Log In</a>
+        <a href="SignUpScreen.html" target="_parent">Sign Up</a>
+      </div>
+      <div class="dropdown" id="drop" hidden>
+        <button class="dropButton" id="pfp" hidden><img src="https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527__340.png" alt="PFP"></button>
+        <div class="dropContent" id="dropContent" hidden>
           <a href="#">Account</a>
           <a href="#">Profile</a>
-          <a href="HomeScreen.html" onclick="logOut()" id="logOut">Log Out</a>
+          <a href="HomeScreen.html" onclick="logOut()">Log Out</a>
         </div>
-      </div>
-      <div class="creds" id="creds">
-        <a href="LogInScreen.html" target="_blank">Log In</a>
-        <a href="SignUpScreen.html" target="_blank">Sign Up</a>
       </div>
     </div>
 
