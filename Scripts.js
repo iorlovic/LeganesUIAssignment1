@@ -1,3 +1,7 @@
+const WELCOMEMESSAGE = document.getElementById("logInMessage");
+const CREDS = document.getElementById("creds");
+const PFP = document.getElementById("pfp");
+
 function logIn() {
     console.log("User Cookie: " + getCookie("user"));
     console.log("User Form: " + document.getElementById("user").value);
@@ -21,18 +25,15 @@ function logOut() {
 }
 
 function isLoggedIn() {
-    const WELCOMEMESSAGE = document.getElementById("logInMessage");
-    const CREDS = document.getElementById("creds");
-    const LOGOUT = document.getElementById("logOut");
     if (checkCookie("loggedIn", "true")) {
         WELCOMEMESSAGE.innerHTML = "";
         CREDS.hidden = true;
-        LOGOUT.hidden = false;
+        PFP.hidden = false;
     }
-    else if (checkCookie("loggedIn", "false")){
+    else {
         WELCOMEMESSAGE.innerHTML = "If you're new here, don't forget to create an account to save your favorite songs!";
+        PFP.hidden = true;
         CREDS.hidden = false;
-        LOGOUT.hidden = true;
     }
 }
 
