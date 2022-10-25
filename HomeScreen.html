@@ -97,6 +97,10 @@
     color: white;
   }
 
+  .search-container {
+    display: grid;
+  }
+
  /* Drop button style */
   .dropButton{
     border: none;
@@ -109,7 +113,7 @@
     height: 100%;
     position: relative;
     display: inline-block;
-    width: 25%;
+    width: 75px;
   }
 
   .dropdown img {
@@ -129,10 +133,11 @@
   /* Style drop links */
   .dropContent a {
     color: black;
-    padding: 12px 16px;
+    padding: 12px 10px;
     text-decoration: none;
     text-align: center;
     display: block;
+    font-size: 16px;
   }
 
   /* Change link color during hover */
@@ -223,17 +228,27 @@
   }
 
   figcaption {
-  /*color: #9b2eb6;*/
-  color: white;
-  text-align: center;
-  text-decoration: underline;
-  text-decoration-line: white;
-  /*text-decoration-color: #9b2eb6;*/
-}
+    /*color: #9b2eb6;*/
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-line: white;
+    /*text-decoration-color: #9b2eb6;*/
+  }
 
   #playButton{ /* Play button that will play a sound when clicked on*/ 
     width: 150px;
     height: 75px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .signUpBox {
+    background-color: rgba(255, 255, 255);
+    margin-top: 0;
   }
 
   .grid-item6 {   /* Bottom part... houses if youre new here */
@@ -307,7 +322,12 @@
     .grid-item5 {
       grid-column-start: 3;
       grid-column-end: 4;
-   }
+   }    
+   .signUpBox {
+      text-align: center;
+      vertical-align: center;
+      margin: 5% auto 0;
+    }
     .grid-item6 {
       grid-column-start: 1;
       grid-column-end: 4;
@@ -316,7 +336,7 @@
       margin-bottom: 200px;
     }
     
-    
+
   }
 
   @media only screen and (min-width: 768px) {
@@ -347,7 +367,7 @@
 
 <body>
   
-  <div class="grid-container">
+  <div class="grid-container" id="gc">
     <div class="grid-item1">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/12in-Vinyl-LP-Record-Angle.jpg/800px-12in-Vinyl-LP-Record-Angle.jpg" 
       alt="Logo">
@@ -357,12 +377,12 @@
     </div>
     <div class="grid-item3">
       <div class="creds" id="creds">
-        <a href="LogInScreen.html" target="_parent">Log In</a>
-        <a href="SignUpScreen.html" target="_parent">Sign Up</a>
+        <a href="LogInScreen.html" target="iframe_login" onclick="openLogIn()">Log In</a>
+        <a href="SignUpScreen.html" target="iframe_signup" onclick="openSignUp()">Sign Up</a>
       </div>
-      <div class="dropdown" id="drop" hidden>
-        <button class="dropButton" id="pfp" hidden><img src="https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527__340.png" alt="PFP"></button>
-        <div class="dropContent" id="dropContent" hidden>
+      <div class="dropdown" id="drop">
+        <button class="dropButton" id="pfp"><img src="https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527__340.png" alt="PFP"></button>
+        <div class="dropContent" id="dropContent" >
           <a href="#">Account</a>
           <a href="#">Profile</a>
           <a href="HomeScreen.html" onclick="logOut()">Log Out</a>
@@ -375,10 +395,10 @@
         <h1>Menu</h1>
         <div class="menu-container">
           <ul>
-          <a href="#"><li>Main Menu</li></a>
+          <a href="#" onclick="mainMenu()"><li>Main Menu</li></a>
           <a href="#"><li>Today's Top Artist</li></a>
           <a href="#"><li>Favorites</li></a>
-          <a href="CreatePlaylistScreen.html" target="_blank"><li>Create Playlist</li></a>
+          <a href="CreatePlaylistScreen.html"><li>Create Playlist</li></a>
           </ul>
         </div>
         <div class="link-container">
@@ -390,10 +410,10 @@
     </div>
 
 
-    <div class="grid-item5">
+    <div class="grid-item5" id="g5">
       
       <h1><div id="header2">On Repeat</div></h1>
-      <div class = "song-container">
+      <div class="song-container" id="sc">
         <!--IMAGES-->
         <!--Template below-->
         <!--<a href="#"><div class="song-item"><figure><img src=""><figcaption>Text</figcaption></figure></div></a>-->
@@ -455,12 +475,17 @@
 
       </div>
     </div>
-
+    <iframe src="SignUpScreen.html" name="iframe_signup" id="su" hidden></iframe>
+    <iframe src="LogInScreen.html" name="iframe_login" id="li" hidden></iframe>
     <div class="grid-item6">
       <p id="logInMessage">
         If you're new here, don't forget to create an account to save your favorite songs!
       </p>
     </div>
+
+
+
+
 
   </div>
 

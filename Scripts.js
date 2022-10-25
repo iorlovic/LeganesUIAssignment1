@@ -1,8 +1,11 @@
 const WELCOMEMESSAGE = document.getElementById("logInMessage");
 const CREDS = document.getElementById("creds");
-const PFPCLASS = document.getElementById("drop")
-const PFP = document.getElementById("pfp");
-const PFPDROP = document.getElementById("dropContent");
+const PFPCLASS = document.getElementById("drop");
+const G5 = document.getElementById("g5");
+const G5HEADER = document.getElementById("header2")
+const SC = document.getElementById("sc");
+const SU = document.getElementById("su");
+const LI = document.getElementById("li");
 
 function logIn() {
     console.log("User Cookie: " + getCookie("user"));
@@ -19,6 +22,7 @@ function logIn() {
     }
     console.log("Correct credentials")
     setCookie("loggedIn", true, 1);
+    LI.remove();
     return true;
 }
 
@@ -29,18 +33,32 @@ function logOut() {
 function isLoggedIn() {
     if (checkCookie("loggedIn", "true")) {
         WELCOMEMESSAGE.innerHTML = "";
+        PFPCLASS.style.display = "inline-block";
         CREDS.hidden = true;
-        PFPCLASS.hidden = false;
-        PFP.hidden = false;
-        PFPDROP.hidden = false;
     }
     else {
         WELCOMEMESSAGE.innerHTML = "If you're new here, don't forget to create an account to save your favorite songs!";
-        PFPCLASS.hidden = true;
-        PFP.hidden = true;
-        PFPDROP.hidden = true;
+        PFPCLASS.style.display = "none";
         CREDS.hidden = false;
     }
+}
+
+function mainMenu() {
+    G5.style.display = "block";
+    SU.style.display = "none";
+    LI.style.display = "none";
+}
+
+function openSignUp() {
+    G5.style.display = "none";
+    SU.style.display = "block";
+    LI.style.display = "none";
+}
+
+function openLogIn() {
+    G5.style.display = "none";
+    SU.style.display = "none";
+    LI.style.display = "block";
 }
 
 function createNewAccount() {
@@ -48,6 +66,7 @@ function createNewAccount() {
     setCookie("user", document.getElementById("user").value, 1);
     setCookie("password", document.getElementById("password").value, 1);
     console.log("After: " + getCookie("user"));
+    openSignUp();
 }
 
 function setCookie(cName, cValue, days) {
