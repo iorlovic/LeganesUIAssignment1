@@ -75,6 +75,64 @@
     height: 75px;
   }
 
+ /* SEARCH BAR **********************************************************************************************************/
+
+/* Add a black background color to the top navigation bar */
+.topnav {
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+  background-color: #9b2eb6;
+  color: white;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 25%;
+  font-size: 17px;
+}
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+
+
+ /* SEARCH BAR **********************************************************************************************************/
+
   .creds { /* Sign and log*/
     overflow: hidden;
     height: 100%;
@@ -375,10 +433,23 @@
     <div class="grid-item2">
       <div class="title"><p>UI RECORDS</p></div>
     </div>
+
+
     <div class="grid-item3">
+
+      <!--
+      <div class="topnav">
+        <input type="text" placeholder="Search..">
+      </div>
+    -->
+
       <div class="creds" id="creds">
         <a href="LogInScreen.html" target="iframe_login" onclick="openLogIn()">Log In</a>
         <a href="SignUpScreen.html" target="iframe_signup" onclick="openSignUp()">Sign Up</a>
+        <div class="topnav">
+          <input type="text" placeholder="Search..">
+        </div>
+
       </div>
       <div class="dropdown" id="drop">
         <button class="dropButton" id="pfp"><img src="https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527__340.png" alt="PFP"></button>
@@ -388,6 +459,7 @@
           <a href="HomeScreen.html" onclick="logOut()">Log Out</a>
         </div>
       </div>
+      
     </div>
 
 
@@ -395,8 +467,8 @@
         <h1>Menu</h1>
         <div class="menu-container">
           <ul>
-          <a href="#" onclick="mainMenu()"><li>Main Menu</li></a>
-          <a href="#"><li>Today's Top Artist</li></a>
+          <a href="HomeScreen.html" onclick="mainMenu()"><li> Main Menu</li></a>
+          <a href="TodaysTopArtist.html" onclick="openArtistPage()"><li> Today's Top Artist</li></a>
           <a href="#"><li>Favorites</li></a>
           <a href="CreatePlaylistScreen.html"><li>Create Playlist</li></a>
           </ul>

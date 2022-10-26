@@ -61,6 +61,12 @@ function openLogIn() {
     LI.style.display = "block";
 }
 
+function openArtistPage() {
+    G5.style.display = "none";
+    SU.style.display = "none";
+    LI.style.display = "block";
+}
+
 function createNewAccount() {
     console.log("Before: " + getCookie("user"));
     setCookie("user", document.getElementById("user").value, 1);
