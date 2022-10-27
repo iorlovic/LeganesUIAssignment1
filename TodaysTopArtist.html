@@ -213,17 +213,15 @@ form.search::after {
     grid-column-start: 1;
     grid-column-end: 3;
     text-align: center;  
-    height: 80vh;
     background-color: #363636;
-    overflow: scroll;
+    overflow: hidden;
   }
 
   .song-container { /* Song container that will be a grid*/
     display: grid;
     background-color: #363636;
-    height: 40%;
     grid-template-columns: repeat(2, auto);
-    overflow: scroll;
+    overflow: hidden;
     text-align: bottom;
   }
 
@@ -255,7 +253,7 @@ form.search::after {
     padding: auto;
     font-size: 120%;
     text-align: center;
-    overflow: scroll;
+    overflow: hidden;
   }
 
   .song-item img { /* Size of the images within the container */
@@ -370,68 +368,6 @@ form.search::after {
 </head>
 
 <body>
-  <div class="grid-container">
-    <div class="grid-item1">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/12in-Vinyl-LP-Record-Angle.jpg/800px-12in-Vinyl-LP-Record-Angle.jpg" 
-      alt="Logo">
-    </div>
-    <div class="grid-item2">
-      <!--
-      <p style="margin:0; text-align:left;">
-      We
-      </p>
-      <p style="margin:0; text-align:center;">
-      Love
-      </p>
-      <p style="margin:0; text-align:right;">
-      Music
-      </p>
-      -->
-      <div class="title"><p>UI RECORDS</p></div>
-    </div>
-
-    <div class="grid-item3">
-
-      <div class="creds" id="creds">
-        <a href="LogInScreen.html" target="iframe_login" onclick="openLogIn()">Log In</a>
-        <a href="SignUpScreen.html" target="iframe_signup" onclick="openSignUp()">Sign Up</a>
-
-        <form class="search" action="/action_page.php" style="margin:auto;max-width:300px">
-          <input type="text" placeholder="Search..." name="search2">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-
-      </div>
-      <div class="dropdown" id="drop">
-        <button class="dropButton" id="pfp"><img src="https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527__340.png" alt="PFP"></button>
-        <div class="dropContent" id="dropContent" >
-          <a href="#">Account</a>
-          <a href="#">Profile</a>
-          <a href="HomeScreen.html" onclick="logOut()">Log Out</a>
-        </div>
-      </div>
-      
-    </div>
-
-
-    <div class="grid-item4">
-        <h1>Menu</h1>
-        <div class="menu-container">
-          <ul>
-          <a href="HomeScreen.html" onclick="mainMenu()"><li> Main Menu</li></a>
-          <a href="TodaysTopArtist.html" onclick="openArtistPage()"><li> Today's Top Artist</li></a>
-          <a href="#"><li>Favorites</li></a>
-          <a href="CreatePlaylistScreen.html"><li>Create Playlist</li></a>
-          </ul>
-        </div>
-        <div class="link-container">
-          <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Cookies Policy</a></li>
-          </ul>
-        </div>
-    </div>
-
 
     <div class="grid-item5">
       
@@ -489,19 +425,10 @@ form.search::after {
       </div>
 
     </div>
-    
-    <div class="grid-item6">
-      <p id="logInMessage">
-        If you're new here, don't forget to create an account to save your favorite songs!
-      </p>
-    </div>
-
-    <!--<script src="Scripts.js"></script>-->
-    <script src="Scripts.js"></script>
 
   </div>
 
-</div>
+
 </body>
 
 </html>
