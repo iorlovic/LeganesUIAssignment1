@@ -1,11 +1,8 @@
 const WELCOMEMESSAGE = document.getElementById("logInMessage");
 const CREDS = document.getElementById("creds");
 const PFPCLASS = document.getElementById("drop");
-const G5 = document.getElementById("g5");
-const G5HEADER = document.getElementById("header2")
-const SC = document.getElementById("sc");
-const SU = document.getElementById("su");
-const LI = document.getElementById("li");
+const MAIN = window.parent.document.getElementById("main");
+
 
 function logIn() {
     console.log("User Cookie: " + getCookie("user"));
@@ -22,7 +19,7 @@ function logIn() {
     }
     console.log("Correct credentials")
     setCookie("loggedIn", true, 1);
-    LI.remove();
+    parent.location.reload();
     return true;
 }
 
@@ -43,22 +40,16 @@ function isLoggedIn() {
     }
 }
 
-function mainMenu() {
-    G5.style.display = "block";
-    SU.style.display = "none";
-    LI.style.display = "none";
+function openMainMenu() {
+    MAIN.baseURI="MainMenu.html";
 }
 
 function openSignUp() {
-    G5.style.display = "none";
-    SU.style.display = "block";
-    LI.style.display = "none";
+    MAIN.src="SignUpScreen.html";
 }
 
 function openLogIn() {
-    G5.style.display = "none";
-    SU.style.display = "none";
-    LI.style.display = "block";
+   MAIN.src="LogInScreen.html";
 }
 
 function openArtistPage() {
