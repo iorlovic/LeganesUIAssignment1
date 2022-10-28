@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 
-  #header1 /*ON REPEAT*/{
+#header1 /*ON REPEAT*/{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 35px;
     color: #9b2eb6;;
@@ -15,198 +15,6 @@
 
   *{
     box-sizing: border-box;
-  }
-
-  body {
-    height: 100vh;
-    margin: 0;
-  }
-
-  .grid-container {
-    display: grid;
-    grid-template-columns: 20% 80%;
-    background-color: #363636;
-    max-width: 100vw;
-    height: 100%;
-  }
-
-  .grid-container>div { /* The entire screen */
-    border: 1px solid rgba(0, 0, 0, 0.8);
-  }
-  
-  .grid-item1 img { /* The record disk top left*/
-    width: 100%;
-    height: 100%;
-    background-color: #212121;
-  }
-
-  .grid-item2 { /* UI Records */
-    background-color: #212121;
-  }
-
-  .title { /*UI RECORDS TOP left*/
-    font-size: 30px;
-    text-align: center;
-    color: #9b2eb6;
-    vertical-align: middle;
-    line-height: 0.8;
-  }
-
-  .grid-item3 { /* Sign in and Log in texts*/
-    font-size: 20px;
-    text-align: center;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    background-color: #212121;
-  }
-
-  /* SEARCH BAR **********************************************************************************************************/
-  
-form.search input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid black;
-  float: left;
-  width: 80%;
-  background: #f1f1f1;
-}
-
-form.search button {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: #212121;
-  color: white;
-  font-size: 17px;
-  border: 1px solid black;
-  border-left: none;
-  cursor: pointer;
-}
-
-form.search button:hover {
-  background: #9b2eb6;
-}
-
-form.search::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
- /* SEARCH BAR **********************************************************************************************************/
-
-
-  .creds { /* Sign and log*/
-    overflow: hidden;
-    height: 100%;
-  }
-
-  .creds a { /* Controls color and position of sign in and log in*/
-    float: right;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 10px 15px;
-    text-decoration: none;
-    width: 50%;
-  }
-
-  .creds a:hover { /* Hover for signin and log */
-    background-color: #9b2eb6;
-    color: white;
-  }
-
-  .search-container {
-    display: grid;
-  }
-
-  /* Drop button style */
-  .dropButton{
-    border: none;
-    padding: 0;
-    height: 100%;
-  }
-
-  /* Styling entire dropdown */
-  .dropdown {
-    height: 100%;
-    position: relative;
-    display: inline-block;
-    width: 75px;
-  }
-
-  .dropdown img {
-    width: 100%;
-    height: 100%;
-  }
-
-  /* Hide content initially */
-  .dropContent {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    max-width: 100%;
-    z-index: 1;
-  }
-
-  /* Style drop links */
-  .dropContent a {
-    color: black;
-    padding: 12px 10px;
-    text-decoration: none;
-    text-align: center;
-    display: block;
-    font-size: 16px;
-  }
-
-  /* Change link color during hover */
-  .dropContent a:hover {background-color: #f1f1f1}
-
-  /* Show the dropdown menu during hover */
-  .dropdown:hover .dropContent {
-    display: block;
-  }
-
-  .grid-item4 { /* Menu */
-    grid-column-start: 1;
-    grid-column-end: 3;
-    text-align: center;
-    /*background-color: rgb(224, 86, 189); */
-    background-color: #212121;
-    color: #9b2eb6;
-  }
-
-  .grid-item4 a {
-    text-decoration: none;
-    color: white;
-  }
-
-  .menu-container ul { /* Containter for menu */
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    }
-
-  .menu-container li { /* Menu container settings  */
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #363636;
-    color: white;
-  }
-
-  .menu-container li:hover { /* Menu for container*/
-    background-color: #9b2eb6;
-  }
-
-
-  .link-container ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  .link-container li {
-    padding: 10px;
-    text-align: center;
   }
 
   .grid-item5 { /* Grid 5 that will contain the song selection container... this is setting the boundaries*/
@@ -229,14 +37,10 @@ form.search::after {
     display: grid;
     background-color: #363636;
     width: 100%;
-    height: 50%;
+    height: 200px;
     text-align: bottom;
   }
 
-  .artistPhoto-container img{
-    width: 100%;
-    height: 60%;
-  }
 
 .textHeader-container{
     display: grid;
@@ -268,19 +72,9 @@ form.search::after {
   text-decoration-color: #9b2eb6;
 }
 
-  #playButton{ /* Play button that will play a sound when clicked on*/ 
-    width: 150px;
-    height: 75px;
-  }
-
-  .grid-item6 {   /* Bottom part... houses if youre new here */
-    grid-column-start: 1;
-    grid-column-end: 3;
-    font-size: 20px;
-    text-align: center;
-    padding: 0 10px;
-    background-color:#212121;
-    color: white;
+.vid-container {
+    height: 100%;
+    width: 100%;
   }
 
   /* For mobile phones: */
@@ -303,41 +97,11 @@ form.search::after {
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
 
-    .grid-container {
-      grid-template-columns: 75px auto 75%;
-      grid-template-rows: 10% 80% 10%
-    }
     .song-container { 
       grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     }
-    .title {
-      font-size: 20px;
-      vertical-align: top;
-    }
-    .grid-item3 {
-      text-align: right;
-      padding: 5px 0;
-      grid-column-start: 3;
-      grid-column-end: 4;
-    }
-    .creds a {
-      width: auto
-    }
-    .grid-item4 {
-      grid-column-start: 1;
-      grid-column-end: 3;
-    }
-    .grid-item5 {
-      grid-column-start: 3;
-      grid-column-end: 4;
-   }
-    .grid-item6 {
-      grid-column-start: 1;
-      grid-column-end: 4;
-    }
-    .menu-container ul {
-      margin-bottom: 200px;
-    }
+  
+
     
     
   }
@@ -356,10 +120,6 @@ form.search::after {
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
-
-    .title {
-      font-size: 27px;
-    }
     
   }
 
@@ -373,13 +133,12 @@ form.search::after {
       
       <h1><div id="header1">Spotlight Artist: Ye</div></h1>
       
-    <div class = "artistPhoto-container">
-        <a<div class="artistPhoto-container" style="background-color:#363636"><figure><img src=" https://wallpaper.dog/large/15141.jpg"></figure></div></a>
-
-        <div class = "textHeader-container">
-            <h1><div id="header1"><br> Albums</div></h1>
-          </div>
-
+  
+      <img src=" https://wallpaper.dog/large/15141.jpg" style="width:90%; height:30%">
+      
+      <div class = "textHeader-container">
+        <h1><div id="header1"><br> Albums</div></h1>
+      </div>
       <div class = "song-container">
         <!--IMAGES-->  
         <a href="https://www.youtube.com/watch?v=wuJIqmha2Hk"><div class="song-item" style="background-color:#363636"><figure><img src="https://video-images.vice.com/_uncategorized/1527898271751-0bffd93463afe53e7f651f72bedfc78b1000x1000x1.jpeg"><figcaption>College Dropout <audio id="playButton" controls>
@@ -419,14 +178,13 @@ form.search::after {
         <h1><div id="header1"><br> Music Video</div></h1>
       </div>
 
-      <div class = "artistPhoto-container">
-        <iframe width="1035" height="315" src="https://www.youtube.com/embed/6vwNcNOTVzY?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-      </div>
+    <div class = "vid-container">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6vwNcNOTVzY?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
 
     </div>
 
-  </div>
 
 
 </body>

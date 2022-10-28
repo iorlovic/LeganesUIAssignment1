@@ -247,6 +247,7 @@ form.search::after {
   iframe {
     width: 100%;
     height: 100%;
+    border: none;
   }
 
   .signUpBox {
@@ -386,8 +387,8 @@ form.search::after {
         <a href="LogInScreen.html" target="iframe_main">Log In</a>
         <a href="SignUpScreen.html" target="iframe_main">Sign Up</a>
 
-        <form class="search" action="/action_page.php" style="margin:15px;;max-width:300px">
-          <input type="text" placeholder="Search..." name="search2">
+        <form class="search" action="SearchResults.html" target="iframe_main" style="margin:15px;;max-width:300px">
+          <input type="text" placeholder="Search..." name="search2" id="searchInput">
           <button type="submit"><i class="fa fa-search"></i></button>
         </form>
 

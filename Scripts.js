@@ -2,6 +2,8 @@ const WELCOMEMESSAGE = document.getElementById("logInMessage");
 const CREDS = document.getElementById("creds");
 const PFPCLASS = document.getElementById("drop");
 const MAIN = window.parent.document.getElementById("main");
+const SEARCHINPUT = window.parent.document.getElementById("searchInput");
+const SEARCHTEXT = document.getElementById("headerSearch");
 const NAME = document.getElementById("name");
 
 function logIn() {
@@ -40,11 +42,9 @@ function isLoggedIn() {
     }
 }
 
-function openArtistPage() {
-    G5.style.display = "none";
-    SU.style.display = "none";
-    LI.style.display = "block";
-}
+function search() {
+    SEARCHTEXT.innerHTML = "Search Results For: " + SEARCHINPUT.value;
+}  
 
 function createNewAccount() {
     console.log("Before: " + getCookie("user"));
