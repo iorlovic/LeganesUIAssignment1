@@ -50,7 +50,12 @@ function createNewAccount() {
     console.log("Before: " + getCookie("user"));
     setCookie("user", document.getElementById("user").value, 1);
     setCookie("password", document.getElementById("password").value, 1);
+    setCookie("first", document.getElementById("first").value, 1);
+    setCookie("last", document.getElementById("last").value, 1);
+    setCookie("email", document.getElementById("email").value, 1)
+    setCookie("dob", document.getElementById("dob").value, 1)
     console.log("After: " + getCookie("user"));
+    parent.location.reload();
 }
 
 function setCookie(cName, cValue, days) {
@@ -97,7 +102,7 @@ function checkCookie(cName, entry) {
 }
 
 function validateForm() {
-    if(false) {
+    if(checkCookie("email", document.getElementById("email").value)) {
         alert("Email already in use");
         return false;
     }
@@ -106,6 +111,32 @@ function validateForm() {
     return true;
 }
 
+function validateModify() {
+    createNewAccount();
+    return true;
+}
+
 function openUser() {
     NAME.innerHTML = "NAME: " + getCookie("user");
+}
+
+function setPlaceholders() {
+    var user = document.getElementById("user");
+    var pass = document.getElementById("password");
+    var first = document.getElementById("first");
+    var last = document.getElementById("last");
+    var email = document.getElementById("email");
+    var dob = document.getElementById("dob");
+    user.placeholder = getCookie("user");
+    user.value = getCookie("user");
+    pass.placeholder = getCookie("password");
+    pass.value = getCookie("password");
+    first.placeholder = getCookie("first");
+    first.value = getCookie("first");
+    last.placeholder = getCookie("last");
+    last.value = getCookie("last");
+    email.placeholder = getCookie("email");
+    email.value = getCookie("email");
+    dob.placeholder = getCookie("dob");
+    dob.value = getCookie("dob");
 }

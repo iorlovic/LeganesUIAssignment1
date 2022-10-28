@@ -63,35 +63,34 @@
   
     <div class="signUpBox col-s-10 col-8"> <fieldset>
         <h1>Change Personal Information?</h1>
-        <form onsubmit="return validateForm()" action="HomeScreen.html" method="post">
+        <form onsubmit="return validateModify()" action="HomeScreen.html" method="post">
             <h3>Account Information:</h3>
             <label for="user">Username:</label>
-            <input type="text" id="user" name="user" placeholder=" getCookie("user") required><br><br>
+            <input type="text" id="user" name="user" required><br><br>
             <label for="password">Password:</label>
-            <input type="text" id="password" name="password" placeholder="EX iL0v3Mus1c" minlength="4"
-                maxlength="8" pattern="[a-z0-9]{4-8}" title="Allowed characters are letters [a-z] and digits [0-9]" required><br><br>
+            <input type="text" id="password" name="password" minlength="4" required
+                maxlength="8" pattern="[a-z0-9]{4-8}" title="Allowed characters are letters [a-z] and digits [0-9]"><br><br>
             <h3>Personal Information:</h3>
-            <label for="name">First Name:</label>
-            <input type="text" id="name" name="name" placeholder="EX: Joe" required><br><br>
-            <label for="surname">Surname:</label>
-            <input type="text" id="surname" name="surname" placeholder="EX: Jones" required><br><br>
+            <label for="first">First Name:</label>
+            <input type="text" id="first" name="first" required><br><br>
+            <label for="last">Surname:</label>
+            <input type="text" id="last" name="last" required><br><br>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="me@gmail.com" required><br><br>
+            <input type="email" id="email" name="email" required><br><br>
             <label for="dob">Date of Birth:</label>
-            <input type="date" id="dob" name="dob" placeholder="1999-01-01" min="1920-01-01" max="2020-01-01" required><br><br>
+            <input type="date" id="dob" name="dob" min="1920-01-01" max="2020-01-01" required><br><br>
             <label for="pfp">Profile Image (Optional):</label>
-            <input type="file" id="pfp" name="pfp" accept="image/*"><br><br>
-            <input type="checkbox" id="terms" name="terms" value="Terms" required>
-            <label for="terms">I have read and accepted the Terms of Use</label><br><br><br>
+            <input type="file" id="pfp" name="pfp" accept="image/*"><br><br><br>
 
             <input style="float: right" type="submit" value="Submit">
-            <input style="float: left" type="reset" value="Restart">
-            <a href="#" style="float: right; margin-right: 3%;">Sign Up with Facebook</a>
-            
+            <input style="float: left" type="reset" value="Restart">            
         </form> 
     </fieldset> </div> 
     
-    
+    <script src="Scripts.js"></script>
+    <script>
+        setPlaceholders();
+    </script>
     
 
 </body> 
