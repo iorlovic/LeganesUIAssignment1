@@ -1,21 +1,8 @@
 const WELCOMEMESSAGE = document.getElementById("logInMessage");
 const CREDS = document.getElementById("creds");
-//<<<<<<< Updated upstream
 const PFPCLASS = document.getElementById("drop");
 const MAIN = window.parent.document.getElementById("main");
-
-//=======
-//<<<<<<< HEAD
-const PFPCLASS = document.getElementById("drop")
-const PFP = document.getElementById("pfp");
-const PFPDROP = document.getElementById("dropContent");
 const NAME = document.getElementById("name");
-//=======
-const PFPCLASS = document.getElementById("drop");
-const MAIN = window.parent.document.getElementById("main");
-
-//>>>>>>> 63e087a905a126a2883dbab58d3688928aaa39e6
-//>>>>>>> Stashed changes
 
 function logIn() {
     console.log("User Cookie: " + getCookie("user"));
@@ -53,18 +40,6 @@ function isLoggedIn() {
     }
 }
 
-function openMainMenu() {
-    MAIN.baseURI="MainMenu.html";
-}
-
-function openSignUp() {
-    MAIN.src="SignUpScreen.html";
-}
-
-function openLogIn() {
-   MAIN.src="LogInScreen.html";
-}
-
 function openArtistPage() {
     G5.style.display = "none";
     SU.style.display = "none";
@@ -76,7 +51,6 @@ function createNewAccount() {
     setCookie("user", document.getElementById("user").value, 1);
     setCookie("password", document.getElementById("password").value, 1);
     console.log("After: " + getCookie("user"));
-    openSignUp();
 }
 
 function setCookie(cName, cValue, days) {
@@ -133,5 +107,5 @@ function validateForm() {
 }
 
 function openUser() {
-    NAME.innerHTML(getCookie("name"));
+    NAME.innerHTML = "NAME: " + getCookie("user");
 }

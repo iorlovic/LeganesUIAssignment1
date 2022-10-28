@@ -244,47 +244,6 @@ form.search::after {
     background-color: #363636;
   }
 
-  .song-container { /* Song container that will be a grid*/
-    display: grid;
-    background-color: #363636;
-    height: 90%;
-    grid-template-columns: repeat(2, auto);
-    /*grid-template-rows: repeat(5, auto);*/
-    overflow: scroll;
-    text-align: bottom;
-  }
-
-  .song-item { /* Within the song container */
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: auto;
-    font-size: 120%;
-    text-align: center;
-  }
-
-  .song-item:hover {
-    background-color: #9b2eb6;
-  }
-
-  .song-item img { /* Size of the images within the container */
-    width: 80%;
-    height: 80%;
-  }
-
-  figcaption {
-    /*color: #9b2eb6;*/
-    color: white;
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-line: white;
-    /*text-decoration-color: #9b2eb6;*/
-  }
-
-  #playButton{ /* Play button that will play a sound when clicked on*/ 
-    width: 150px;
-    height: 75px;
-  }
-
   iframe {
     width: 100%;
     height: 100%;
@@ -436,7 +395,7 @@ form.search::after {
       <div class="dropdown" id="drop">
         <button class="dropButton" id="pfp"><img src="https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527__340.png" alt="PFP"></button>
         <div class="dropContent" id="dropContent" >
-          <a href="#">Account</a>
+          <a href="AccountScreen.html" target="iframe_main">Account</a>
           <a href="ProfileScreen.html" target="iframe_main">Profile</a>
           <a href="HomeScreen.html" onclick="logOut()">Log Out</a>
         </div>
