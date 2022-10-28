@@ -1,8 +1,21 @@
 const WELCOMEMESSAGE = document.getElementById("logInMessage");
 const CREDS = document.getElementById("creds");
+//<<<<<<< Updated upstream
 const PFPCLASS = document.getElementById("drop");
 const MAIN = window.parent.document.getElementById("main");
 
+//=======
+//<<<<<<< HEAD
+const PFPCLASS = document.getElementById("drop")
+const PFP = document.getElementById("pfp");
+const PFPDROP = document.getElementById("dropContent");
+const NAME = document.getElementById("name");
+//=======
+const PFPCLASS = document.getElementById("drop");
+const MAIN = window.parent.document.getElementById("main");
+
+//>>>>>>> 63e087a905a126a2883dbab58d3688928aaa39e6
+//>>>>>>> Stashed changes
 
 function logIn() {
     console.log("User Cookie: " + getCookie("user"));
@@ -117,4 +130,8 @@ function validateForm() {
     console.log("Form: " + document.getElementById("user").value);
     createNewAccount();
     return true;
+}
+
+function openUser() {
+    NAME.innerHTML(getCookie("name"));
 }
