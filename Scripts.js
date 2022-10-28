@@ -1,4 +1,5 @@
 const WELCOMEMESSAGE = document.getElementById("logInMessage");
+const SC = document.getElementById("sc");
 const CREDS = document.getElementById("creds");
 const PFPCLASS = document.getElementById("drop");
 const MAIN = window.parent.document.getElementById("main");
@@ -34,11 +35,13 @@ function isLoggedIn() {
         WELCOMEMESSAGE.innerHTML = "";
         PFPCLASS.style.display = "inline-block";
         CREDS.hidden = true;
+        SC.style.display = "grid";
     }
     else {
         WELCOMEMESSAGE.innerHTML = "If you're new here, don't forget to create an account to save your favorite songs!";
         PFPCLASS.style.display = "none";
         CREDS.hidden = false;
+        SC.style.display = "none";
     }
 }
 

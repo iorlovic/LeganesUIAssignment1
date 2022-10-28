@@ -77,37 +77,46 @@
 
  /* SEARCH BAR **********************************************************************************************************/
 
-form.search input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid black;
-  float: left;
-  width: 80%;
-  background: #f1f1f1;
-}
+ .search-container{
+    display: grid;
+    height: 75px;
+    width: 100%;
+    grid-template-columns: auto 75px;
+  }
 
-form.search button {
-  float: left;
-  width: 20%;
-  padding: 0px;
-  background: #212121;
-  color: white;
-  border: 1px solid black;
-  border-left: none;
-  cursor: pointer;
-}
+  .search input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid black;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
 
-form.search button:hover {
-  background: #9b2eb6;
-}
+  .search button {
+    float: left;
+    width: 20%;
+    padding: 0px;
+    
+    background: #212121;
+    color: white;
+    border: 1px solid black;
+    border-left: none;
+    cursor: pointer;
+  }
 
-form.search::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+  .search button:hover {
+    background: #9b2eb6;
+  }
+
+  .search::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 
  /* SEARCH BAR **********************************************************************************************************/
+
 
   .creds { /* Sign and log*/
     overflow: hidden;
@@ -140,7 +149,7 @@ form.search::after {
 
   /* Styling entire dropdown */
   .dropdown {
-    height: 100%;
+    height: 75px;
     position: relative;
     display: inline-block;
     width: 75px;
@@ -223,10 +232,11 @@ form.search::after {
 
 /*LIKE BUTTON************************************************************/
 .fa {
-  font-size: 40px;
+  font-size: 30px;
   cursor: pointer;
   user-select: none;
   color: white;
+  padding: 5px;
 }
 
  .fa-search:hover{
@@ -386,22 +396,24 @@ form.search::after {
       <div class="creds" id="creds">
         <a href="LogInScreen.html" target="iframe_main">Log In</a>
         <a href="SignUpScreen.html" target="iframe_main">Sign Up</a>
-
-        <form class="search" action="SearchResults.html" target="iframe_main" style="margin:15px;;max-width:300px">
-          <input type="text" placeholder="Search..." name="search2" id="searchInput">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-
       </div>
-      <div class="dropdown" id="drop">
-        <button class="dropButton" id="pfp"><img src="https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527__340.png" alt="PFP"></button>
-        <div class="dropContent" id="dropContent" >
-          <a href="AccountScreen.html" target="iframe_main">Account</a>
-          <a href="ProfileScreen.html" target="iframe_main">Profile</a>
-          <a href="HomeScreen.html" onclick="logOut()">Log Out</a>
+
+      <div class="search-container" id="sc">
+        <div class="search" style="height:75px">
+          <form action="SearchResults.html" target="iframe_main" style="font-size:10px; margin:15px; max-width:300px">
+            <input type="text" placeholder="Search..." name="search2" id="searchInput">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+        <div class="dropdown" id="drop">
+          <button class="dropButton" id="pfp"><img src="https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527__340.png" alt="PFP"></button>
+          <div class="dropContent" id="dropContent" >
+            <a href="AccountScreen.html" target="iframe_main">Account</a>
+            <a href="ProfileScreen.html" target="iframe_main">Profile</a>
+            <a href="HomeScreen.html" onclick="logOut()">Log Out</a>
+          </div>
         </div>
       </div>
-      
     </div>
 
 
