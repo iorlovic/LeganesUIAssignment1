@@ -90,10 +90,9 @@ form.search input[type=text] {
 form.search button {
   float: left;
   width: 20%;
-  padding: 10px;
+  padding: 0px;
   background: #212121;
   color: white;
-  font-size: 17px;
   border: 1px solid black;
   border-left: none;
   cursor: pointer;
@@ -225,15 +224,16 @@ form.search::after {
 
 /*LIKE BUTTON************************************************************/
 .fa {
-  font-size: 50px;
+  font-size: 40px;
   cursor: pointer;
   user-select: none;
   color: white;
 }
 
-.fa:hover {
-  color: #9b2eb6;
-}
+ .fa-search:hover{
+  background-color: #9b2eb6;
+ }
+
 
 /*LIKE BUTTON************************************************************/
 
@@ -255,18 +255,16 @@ form.search::after {
     text-align: bottom;
   }
 
-  .song-container img:hover { /* Hover for song container.... THIS IS WORKING*/
-    background-color: #1bf134;
-    width: 100%;
-    height: 100%;
-  }
-
   .song-item { /* Within the song container */
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: auto;
     font-size: 120%;
     text-align: center;
+  }
+
+  .song-item:hover {
+    background-color: #9b2eb6;
   }
 
   .song-item img { /* Size of the images within the container */
@@ -430,7 +428,7 @@ form.search::after {
         <a href="LogInScreen.html" target="iframe_main">Log In</a>
         <a href="SignUpScreen.html" target="iframe_main">Sign Up</a>
 
-        <form class="search" action="/action_page.php" style="margin:auto;max-width:300px">
+        <form class="search" action="/action_page.php" style="margin:15px;;max-width:300px">
           <input type="text" placeholder="Search..." name="search2">
           <button type="submit"><i class="fa fa-search"></i></button>
         </form>
@@ -440,7 +438,7 @@ form.search::after {
         <button class="dropButton" id="pfp"><img src="https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527__340.png" alt="PFP"></button>
         <div class="dropContent" id="dropContent" >
           <a href="#">Account</a>
-          <a href="#">Profile</a>
+          <a href="ProfileScreen.html" target="iframe_main">Profile</a>
           <a href="HomeScreen.html" onclick="logOut()">Log Out</a>
         </div>
       </div>
@@ -455,7 +453,7 @@ form.search::after {
           <a href="MainMenu.html" target="iframe_main"><li>Main Menu</li></a>
           <a href="TodaysTopArtist.html" target="iframe_main"><li>Today's Top Artist</li></a>
           <a href="#"><li>Favorites</li></a>
-          <a href="CreatePlaylistScreen.html"><li>Create Playlist</li></a> 
+          <a href="CreatePlaylistScreen.html" target="iframe_main"><li>Create Playlist</li></a> 
           </ul>
         </div>
         <div class="link-container">
