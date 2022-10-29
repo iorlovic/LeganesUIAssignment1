@@ -3,6 +3,7 @@ const CREDS = document.getElementById("creds");
 const PFPCLASS = document.getElementById("drop");
 const MAIN = window.parent.document.getElementById("main");
 const NAME = document.getElementById("name");
+const DATE = document.getElementById("dates");
 
 function logIn() {
     console.log("User Cookie: " + getCookie("user"));
@@ -60,6 +61,12 @@ function setCookie(cName, cValue, days) {
     document.cookie = cName + "=" + cValue + ";" + expires + ";SameSite=None;path=/;Secure";
 }
 
+function getDate(days) {
+    let datePage = date;
+    return datePage;
+}
+
+
 function getCookie(cName) {
     let name = cName + "=";
 
@@ -108,4 +115,8 @@ function validateForm() {
 
 function openUser() {
     NAME.innerHTML = "NAME: " + getCookie("user");
+}
+
+function openDate() {
+    DATE.innerHTML = getDate("date");
 }
