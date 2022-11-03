@@ -60,18 +60,19 @@
     
     <div class="playlistBox col-s-8 col-6"> <fieldset>
         <h1>Create a New Playlist</h1>
-        <form onsubmit="" method="post">
+        <form onsubmit="return createPlaylist()" action="MainMenu.html" id="post">
             <label for="playlist">Playlist Name:</label><br>
             <input type="text" id="playlist" name="playlist" placeholder="My Favorites"><br><br>
             <label for="search">Search for Songs</label><br>
-            <div class="song-container">
+            <div class="song-search">
                 <input type="text" id="search" name="search" placeholder="Drake">
-                <button type="submit">Search</button><br><br>
+                <button>Search</button><br><br>
             </div>
             <input type="submit" value="Save">
         </form> 
     </fieldset> </div> 
-    
+
+<script src="Scripts.js"></script>
 </body>
 
 

@@ -130,8 +130,12 @@ function openUser() {
     NAME.innerHTML = "NAME: " + getCookie("user");
 }
 
+/*
 function openDate() {
     DATE.innerHTML = getDate("date");
+}
+*/
+
 function setPlaceholders() {
     var user = document.getElementById("user");
     var pass = document.getElementById("password");
@@ -152,4 +156,7 @@ function setPlaceholders() {
     dob.placeholder = getCookie("dob");
     dob.value = getCookie("dob");
 }
+
+function createPlaylist() {
+    return true;
 }
