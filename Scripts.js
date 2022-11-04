@@ -7,7 +7,6 @@ const SEARCHINPUT = window.parent.document.getElementById("searchInput");
 const SEARCHTEXT = document.getElementById("headerSearch");
 const NAME = document.getElementById("name");
 const DATE = document.getElementById("dates");
-const btn = document.getElementById('btn');
 
 // Checks if login/password creds match and logs user in
 function logIn() { 
@@ -147,16 +146,10 @@ function setPlaceholders() {
     dob.value = getCookie("dob");
 }
 
-$('.flip-container .flipper').click(function() {
+('.flip-container .flipper').click(function() {
     $(this).closest('.flip-container').toggleClass('hover');
     $(this).css('transform, rotateY(180deg)');
 });
-
-let testButton = document.getElementById("testbutton");
-
-testButton.addEventListener("click", () => {
-  testButton.classList.toggle('clicked');
-})
 
 
 btn.addEventListener('click', function onClick(event) {
@@ -174,26 +167,3 @@ btn.addEventListener('click', function onClick(event) {
     // btn.style.color = 'blue';
   }
 });
-
-function log() {
-    console.log('Clicked');
-    btn.style.backgroundColor = 'green';
-  };
-
-
-function onClick() {
-    const backgroundColor = btn.style.backgroundColor;
-  
-    if (backgroundColor === 'salmon') {
-      btn.style.backgroundColor = 'green';
-  
-      // 👇️ optionally change text color
-      // btn.style.color = 'white';
-    } else {
-      btn.style.backgroundColor = 'salmon';
-  
-      // 👇️ optionally change text color
-      // btn.style.color = 'blue';
-    }
-  }
-
