@@ -2,156 +2,150 @@
 <html>
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
-    <style>
-        #headerSearch /*ON REPEAT*/ {
-          color:rgb(234, 210, 210)8;
-          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-          font-size: 30px;
-          -webkit-text-stroke-width: .5px;
-          -webkit-text-stroke-color: rgb(182, 138, 197);
-          
-        }
-      
-        #header2 /*ON REPEAT*/{
-          font-family: Baskerville;
-          font-size: 30px;
-          color: #9b2eb6;
-          text-shadow: -5px -3px 0 rgb(216, 103, 236), 1px -1px 0 rgb(208, 197, 197), -1px 1px 0 rgb(221, 210, 210), 1px 1px 0 #000;
-        }
-      
-        #header3 /*ON REPEAT*/{
-          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-          font-size: 30px;
-          color: #9b2eb6;;
-        }
-      
-        *{
-          box-sizing: border-box;
-        }
-      
-        body {
-          height: 100vh;
-          margin: 0;
-        }
-        
-        .grid-item5 { /* Grid 5 that will contain the song selection container... this is setting the boundaries*/
-          grid-column-start: 1;
-          grid-column-end: 3;
-          text-align: center;  
-          
-          background-color: #363636;
-        }
-      
-        .song-container { /* Song container that will be a grid*/
-          display: grid;
-          background-color: #363636;
-          height: 90%;
-          grid-template-columns: repeat(2, auto);
-          /*grid-template-rows: repeat(5, auto);*/
-          overflow: hidden;
-          text-align: bottom;
-        }
-      
-      
-        .song-item { /* Within the song container */
-          background-color:#363636;
-          border: 1px solid rgba(0, 0, 0, 0.8);
-          padding: auto;
-          font-size: 120%;
-          text-align: center;
-        }
-      
-        .song-item:hover {
-          background-color: #9b2eb6;
-        }
-        
-        .song-item img { /* Size of the images within the container */
-          width: 80%;
-          height: 80%;
-        }
-      
-        figcaption {
-          /*color: #9b2eb6;*/
-          color: white;
-          text-align: center;
-          text-decoration: underline;
-          text-decoration-line: white;
-          /*text-decoration-color: #9b2eb6;*/
-        }
+<style>
+  #headerSearch /*ON REPEAT*/ {
+    color:rgb(234, 210, 210)8;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: rgb(182, 138, 197);
+    
+  }
+
+  #header2 /*ON REPEAT*/{
+    font-family: Baskerville;
+    font-size: 30px;
+    color: #9b2eb6;
+    text-shadow: -5px -3px 0 rgb(216, 103, 236), 1px -1px 0 rgb(208, 197, 197), -1px 1px 0 rgb(221, 210, 210), 1px 1px 0 #000;
+  }
+
+  #header3 /*ON REPEAT*/{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    color: #9b2eb6;;
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+
+  body {
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .grid-item5 { /* Grid 5 that will contain the song selection container... this is setting the boundaries*/
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;  
+    
+    background-color: #363636;
+  }
+
+  .song-container { /* Song container that will be a grid*/
+    display: grid;
+    background-color: #363636;
+    height: 90%;
+    grid-template-columns: repeat(2, auto);
+    /*grid-template-rows: repeat(5, auto);*/
+    overflow: hidden;
+    text-align: bottom;
+  }
+
+
+  .song-item { /* Within the song container */
+    background-color:#363636;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: auto;
+    font-size: 120%;
+    text-align: center;
+  }
+
+  .song-item:hover {
+    background-color: #9b2eb6;
+  }
+  
+  .song-item img { /* Size of the images within the container */
+    width: 80%;
+    height: 80%;
+  }
+
+  figcaption {
+    /*color: #9b2eb6;*/
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-line: white;
+    /*text-decoration-color: #9b2eb6;*/
+  }
 
 /*LIKE BUTTON************************************************************/
-        .fa {
-          font-size: 50px;
-          cursor: pointer;
-          user-select: none;
-          color: white;
-          text-align: right;
-        }
+  .fa {
+    font-size: 50px;
+    cursor: pointer;
+    user-select: none;
+    color: white;
+    text-align: right;
+  }
 
-        .fa:hover {
-          color: #f23788;
-        }
+  .fa:hover {
+    color: #f23788;
+  }
 /*LIKE BUTTON************************************************************/
 
-      
-        #playButton{ /* Play button that will play a sound when clicked on*/ 
-          width: 150px;
-          height: 75px;
-        }
-      
-      
-        /* For mobile phones: */
-        [class*="col-"] {
-          width: 100%;
-        }
-      
-        @media only screen and (min-width: 600px) {
-          /* For tablets: */
-          .col-s-1 {width: 8.33%;}
-          .col-s-2 {width: 16.66%;}
-          .col-s-3 {width: 25%;}
-          .col-s-4 {width: 33.33%;}
-          .col-s-5 {width: 41.66%;}
-          .col-s-6 {width: 50%;}
-          .col-s-7 {width: 58.33%;}
-          .col-s-8 {width: 66.66%;}
-          .col-s-9 {width: 75%;}
-          .col-s-10 {width: 83.33%;}
-          .col-s-11 {width: 91.66%;}
-          .col-s-12 {width: 100%;}
 
-          .song-container { 
-            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-          }
-        }
+  #playButton{ /* Play button that will play a sound when clicked on*/ 
+    width: 150px;
+    height: 75px;
+  }
+
+
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+
+    .song-container { 
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    }
+  }
 </style>
 </head>
 
 <body>
-<div class="grid-item5">
-<h1><div id="headerSearch">Search Results</div></h1>
-      <div class="song-container">
-    
-        <a href="https://www.youtube.com/watch?v=wuJIqmha2Hk"><div class="song-item" style="background-color:#363636"><figure><img src="https://video-images.vice.com/_uncategorized/1527898271751-0bffd93463afe53e7f651f72bedfc78b1000x1000x1.jpeg"><figcaption>College Dropout <audio id="playButton" controls>
-            <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=fJ9rUzIMcZQ"><div class="song-item" style="background-color:#363636"><figure><img src="https://upload.wikimedia.org/wikipedia/en/f/f4/Late_registration_cd_cover.jpg"><figcaption>Late Registration <audio id="playButton" controls>
-            <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=3CkLMG5NwUg"><div class="song-item" style="background-color:#363636"><figure><img src="https://upload.wikimedia.org/wikipedia/en/7/70/Graduation_%28album%29.jpg"><figcaption>Graduation <audio id="playButton" controls>
-            <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=nfWlot6h_JM"><div class="song-item" style="background-color:#363636"><figure><img src="https://upload.wikimedia.org/wikipedia/en/f/f1/808s_%26_Heartbreak.png"><figcaption>808s & Heartbreak <audio id="playButton" controls>
-            <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-        <a href="https://www.youtube.com/watch?v=4m1EFMoRFvY"><div class="song-item" style="background-color:#363636"><figure><img src="https://upload.wikimedia.org/wikipedia/tr/f/f0/My_Beautiful_Dark_Twisted_Fantasy.jpg"><figcaption>My Beautiful Dark Twisted Fantasy <audio id="playButton" controls>
-            <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-          
-
-
-
-
-      </div>
+  <div class="grid-item5">
+    <h1><div id="headerSearch">Search Results</div></h1>
+    <div class="song-container">
+      <a href="https://www.youtube.com/watch?v=wuJIqmha2Hk"><div class="song-item" style="background-color:#363636"><figure><img src="https://video-images.vice.com/_uncategorized/1527898271751-0bffd93463afe53e7f651f72bedfc78b1000x1000x1.jpeg"><figcaption>College Dropout <audio id="playButton" controls>
+          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
+      <a href="https://www.youtube.com/watch?v=fJ9rUzIMcZQ"><div class="song-item" style="background-color:#363636"><figure><img src="https://upload.wikimedia.org/wikipedia/en/f/f4/Late_registration_cd_cover.jpg"><figcaption>Late Registration <audio id="playButton" controls>
+          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
+      <a href="https://www.youtube.com/watch?v=3CkLMG5NwUg"><div class="song-item" style="background-color:#363636"><figure><img src="https://upload.wikimedia.org/wikipedia/en/7/70/Graduation_%28album%29.jpg"><figcaption>Graduation <audio id="playButton" controls>
+          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
+      <a href="https://www.youtube.com/watch?v=nfWlot6h_JM"><div class="song-item" style="background-color:#363636"><figure><img src="https://upload.wikimedia.org/wikipedia/en/f/f1/808s_%26_Heartbreak.png"><figcaption>808s & Heartbreak <audio id="playButton" controls>
+          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
+      <a href="https://www.youtube.com/watch?v=4m1EFMoRFvY"><div class="song-item" style="background-color:#363636"><figure><img src="https://upload.wikimedia.org/wikipedia/tr/f/f0/My_Beautiful_Dark_Twisted_Fantasy.jpg"><figcaption>My Beautiful Dark Twisted Fantasy <audio id="playButton" controls>
+          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
     </div>
-    <script src="Scripts.js"></script>
-    <script>
-        search();
-    </script>
+  </div>
+  <script src="Scripts.js"></script>
+  <script>
+    search();
+  </script>
 </body>
 </html>

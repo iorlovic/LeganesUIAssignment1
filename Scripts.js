@@ -9,7 +9,8 @@ const NAME = document.getElementById("name");
 const DATE = document.getElementById("dates");
 const btn = document.getElementById('btn');
 
-function logIn() {
+// Checks if login/password creds match and logs user in
+function logIn() { 
     console.log("User Cookie: " + getCookie("user"));
     console.log("User Form: " + document.getElementById("user").value);
     console.log("Password Cookie: " + getCookie("password"));
@@ -27,11 +28,11 @@ function logIn() {
     parent.location.reload();
     return true;
 }
-
+// Logs user out
 function logOut() {
     setCookie("loggedIn", false, 1);
 }
-
+//Changes scene based on if user is logged in
 function isLoggedIn() {
     if (checkCookie("loggedIn", "true")) {
         WELCOMEMESSAGE.innerHTML = "";
@@ -46,11 +47,11 @@ function isLoggedIn() {
         SC.style.display = "none";
     }
 }
-
+// Sets title for search results
 function search() {
     SEARCHTEXT.innerHTML = "Search Results For: " + SEARCHINPUT.value;
 }  
-
+// Sets all cookies for account creation
 function createNewAccount() {
     console.log("Before: " + getCookie("user"));
     setCookie("user", document.getElementById("user").value, 1);
@@ -62,20 +63,14 @@ function createNewAccount() {
     console.log("After: " + getCookie("user"));
     parent.location.reload();
 }
-
+// Creates a cookie
 function setCookie(cName, cValue, days) {
     const date = new Date();
     date.setTime(date.getTime() + (days*24*60*60*1000));
     let expires = "expires="+ date.toUTCString();
     document.cookie = cName + "=" + cValue + ";" + expires + ";SameSite=None;path=/;Secure";
 }
-
-function getDate(days) {
-    let datePage = date;
-    return datePage;
-}
-
-
+// Returns cookie value
 function getCookie(cName) {
     let name = cName + "=";
 
@@ -97,21 +92,21 @@ function getCookie(cName) {
     }
     return "";
 }
-
+// Checks if cookie exists
 function checkCookie(cName) {
     if (getCookie(cName) != "") {
         return true;
     }
     return false;
 }
-
+// Checks if cookie = specific entry
 function checkCookie(cName, entry) {
     if (getCookie(cName) == entry) {
         return true;
     }
     return false;
 }
-
+// Checks if email already in use before creating new account
 function validateForm() {
     if(checkCookie("email", document.getElementById("email").value)) {
         alert("Email already in use");
@@ -121,22 +116,16 @@ function validateForm() {
     createNewAccount();
     return true;
 }
-
+// Helper function to add specifications before modifying your account info if needed
 function validateModify() {
     createNewAccount();
     return true;
 }
-
+// Inputs user name for profile screen
 function openUser() {
     NAME.innerHTML = "NAME: " + getCookie("user");
 }
-
-/*
-function openDate() {
-    DATE.innerHTML = getDate("date");
-}
-*/
-
+// Sets placeholders and values for account screen
 function setPlaceholders() {
     var user = document.getElementById("user");
     var pass = document.getElementById("password");

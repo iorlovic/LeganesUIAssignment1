@@ -219,12 +219,12 @@
   }
 
 
-  .link-container ul {
+  .link-container ul { /*style link outer list*/
     list-style-type: none;
     padding: 0;
   }
 
-  .link-container li {
+  .link-container li { /*style link inner list*/
     padding: 10px;
     text-align: center;
   }
@@ -350,8 +350,6 @@
     .menu-container ul {
       margin-bottom: 200px;
     }
-    
-
   }
 
   @media only screen and (min-width: 768px) {
@@ -372,33 +370,24 @@
     .title {
       font-size: 27px;
     }
-    
-  }
-
-  
+  } 
 </style>
 </head>
 
 
 <body>
-  
   <div class="grid-container" id="gc">
     <div class="grid-item1">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/12in-Vinyl-LP-Record-Angle.jpg/800px-12in-Vinyl-LP-Record-Angle.jpg" 
-      alt="Logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/12in-Vinyl-LP-Record-Angle.jpg/800px-12in-Vinyl-LP-Record-Angle.jpg" alt="Logo">
     </div>
     <div class="grid-item2">
       <div class="title"><p>UI RECORDS</p></div>
     </div>
-
-
     <div class="grid-item3">
-
       <div class="creds" id="creds">
         <a href="LogInScreen.html" target="iframe_main">Log In</a>
         <a href="SignUpScreen.html" target="iframe_main">Sign Up</a>
       </div>
-
       <div class="search-container" id="sc">
         <div class="search" style="height:75px">
           <form action="SearchResults.html" target="iframe_main" style="font-size:10px; margin:15px; max-width:300px">
@@ -416,8 +405,6 @@
         </div>
       </div>
     </div>
-
-
     <div class="grid-item4">
         <h1>Menu</h1>
         <div class="menu-container">
@@ -435,8 +422,6 @@
           </ul>
         </div>
     </div>
-
-
     <div class="grid-item5" id="g5">
       <iframe src="MainMenu.html" name="iframe_main" id="main"></iframe>
     </div>
@@ -447,8 +432,6 @@
     </div>
   </div>
 
-
-
   <script src="Scripts.js"></script>
   <script>
     console.log("Home screen opened");
@@ -456,5 +439,4 @@
   </script>
 
 </body>
-
 </html>

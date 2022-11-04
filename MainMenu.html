@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
     <style>
         #header1 /*ON REPEAT*/ {
           color:rgb(234, 210, 210)8;
@@ -62,36 +62,37 @@
           text-align: center;
         }
 
-/* hide back of pane during swap */
-.front, .back {
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+        /* hide back of pane during swap */
+        .front, .back {
+          backface-visibility: hidden;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
 
-/* front pane, placed above back .front { */
-.front {
-  z-index: 2;
-  transform: rotateY(0deg);
-  height: 100%;
-  width: 100%;
-}
+        /* front pane, placed above back .front { */
+        .front {
+          z-index: 2;
+          transform: rotateY(0deg);
+          height: 100%;
+          width: 100%;
+        }
 
-/* back, initially hidden pane */
-.back {
-  transform: rotateY(180deg);
-  background-color: #9b2eb6;
-  height: 100%;
-  width: 100%;
-}
+        /* back, initially hidden pane */
+        .back {
+          transform: rotateY(180deg);
+          background-color: #9b2eb6;
+          height: 100%;
+          width: 100%;
+        }
 
-/* flip speed */
-.flipper {
-  transition: 0.6s;
-  transform-style: preserve-3d;
-  position: relative;
-}
+        /* flip speed */
+        .flipper {
+          transition: 0.6s;
+          transform-style: preserve-3d;
+          position: relative;
+        }
+
       .song-item:hover {
           background-color: #363636;
           /* #9b2eb6 */
@@ -224,25 +225,25 @@ body {
 
 
 /*LIKE BUTTON************************************************************/
-        .fa {
-          font-size: 50px;
-          cursor: pointer;
-          user-select: none;
-          color: white;
-          text-align: right;
-        }
+.fa {
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+  color: white;
+  text-align: right;
+}
 
-        .fa:hover {
-          color: #f23788;
-        }
+.fa:hover {
+  color: #f23788;
+}
 
-        .fa:active{
-          color: #f23788;
-        }
+.fa:active{
+  color: #f23788;
+}
 
-        a:active{
-          color: #f23788;
-        }
+a:active{
+  color: #f23788;
+}
 
 #testbutton {
   background-color: #0f2e0c;
@@ -317,95 +318,41 @@ input:checked + .slider:before {
 /* Toggle like*/
 
 
-/*LIKE BUTTON************************************************************/
+/*LIKE BUTTON************************************************************/      
+#playButton{ /* Play button that will play a sound when clicked on*/ 
+  width: 150px;
+  height: 75px;
+}
 
 
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
 
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
 
-      
-        #playButton{ /* Play button that will play a sound when clicked on*/ 
-          width: 150px;
-          height: 75px;
-        }
-      
-      
-        /* For mobile phones: */
-        [class*="col-"] {
-          width: 100%;
-        }
-      
-        @media only screen and (min-width: 600px) {
-          /* For tablets: */
-          .col-s-1 {width: 8.33%;}
-          .col-s-2 {width: 16.66%;}
-          .col-s-3 {width: 25%;}
-          .col-s-4 {width: 33.33%;}
-          .col-s-5 {width: 41.66%;}
-          .col-s-6 {width: 50%;}
-          .col-s-7 {width: 58.33%;}
-          .col-s-8 {width: 66.66%;}
-          .col-s-9 {width: 75%;}
-          .col-s-10 {width: 83.33%;}
-          .col-s-11 {width: 91.66%;}
-          .col-s-12 {width: 100%;}
-      
-          .grid-container {
-            grid-template-columns: 75px auto 75%;
-            grid-template-rows: 75px 80% auto
-          }
-          .song-container { 
-            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-          }
-          .title {
-            font-size: 20px;
-            vertical-align: top;
-          }
-          .grid-item3 {
-            text-align: right;
-            grid-column-start: 3;
-            grid-column-end: 4;
-          }
-          .creds a {
-            width: auto;
-            height: 100%;
-            padding: 25px 15px;
-          }
-          .dropdown {
-            width: 75px;
-            height: 75px;
-          }
-          .dropButton {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-          }
-          .dropdown img {
-            width: 100%;
-            height: 100%;
-          }
-          .grid-item4 {
-            grid-column-start: 1;
-            grid-column-end: 3;
-          }
-          .grid-item5 {
-            grid-column-start: 3;
-            grid-column-end: 4;
-         }    
-         .signUpBox {
-            text-align: center;
-            vertical-align: center;
-            margin: 5% auto 0;
-          }
-          .grid-item6 {
-            grid-column-start: 1;
-            grid-column-end: 4;
-          }
-          .menu-container ul {
-            margin-bottom: 200px;
-          }
-          
-      
-        }
+  .grid-container {
+    grid-template-columns: 75px auto 75%;
+    grid-template-rows: 75px 80% auto
+  }
+  .song-container { 
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  }
+}
 </style>
 </head>
 
