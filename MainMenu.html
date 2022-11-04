@@ -3,68 +3,63 @@
 <head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
     <style>
-        #header1 /*ON REPEAT*/ {
-          color:rgb(234, 210, 210)8;
-          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-          font-size: 20px;
-          -webkit-text-stroke-width: .5px;
-          -webkit-text-stroke-color: rgb(182, 138, 197);
-          
-        }
+
+#header1 /*ON REPEAT*/ {
+  color:rgb(234, 210, 210)8;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: rgb(182, 138, 197);
+}
       
-        #header2 /*ON REPEAT*/{
-          font-family: Baskerville;
-          font-size: 30px;
-          color: #9b2eb6;
-          text-shadow: -5px -3px 0 rgb(216, 103, 236), 1px -1px 0 rgb(208, 197, 197), -1px 1px 0 rgb(221, 210, 210), 1px 1px 0 #000;
-        }
+#header2 /*ON REPEAT*/{
+  font-family: Baskerville;
+  font-size: 30px;
+  color: #9b2eb6;
+  text-shadow: -5px -3px 0 rgb(216, 103, 236), 1px -1px 0 rgb(208, 197, 197), -1px 1px 0 rgb(221, 210, 210), 1px 1px 0 #000;
+}
       
-        #header3 /*ON REPEAT*/{
-          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-          font-size: 30px;
-          color: #9b2eb6;;
-        }
+#header3 /*ON REPEAT*/{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
+  color: #9b2eb6;;
+}
       
-        *{
-          box-sizing: border-box;
-        }
+*{
+  box-sizing: border-box;
+}
       
-        body {
-          height: 100vh;
-          margin: 0;
-        }
+body {
+  height: 100vh;
+  margin: 0;
+}
         
-        .grid-item5 { /* Grid 5 that will contain the song selection container... this is setting the boundaries*/
-          grid-column-start: 1;
-          grid-column-end: 3;
-          text-align: center;  
-          
-          background-color: #363636;
-        }
+.grid-item5 { /* Grid 5 that will contain the song selection container... this is setting the boundaries*/
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;  
+  background-color: #363636;
+}
       
-        .song-container { /* Song container that will be a grid*/
-          display: grid;
-          background-color: #363636;
-          height: 90%;
-          grid-template-columns: repeat(2, auto);
-          /*grid-template-columns: repeat(2, auto);*/
-          /*grid-template-rows: repeat(5, auto);*/
-          overflow: hidden;
-          text-align: bottom;
-        }
+.song-container { /* Song container that will be a grid*/
+  display: grid;
+  background-color: #363636;
+  height: 90%;
+  grid-template-columns: repeat(2, auto);
+  overflow: hidden;
+  text-align: bottom;
+}
       
       
-        .song-item{ /* Within the song container */
-          background-color:#363636;
-          border: 1px solid rgba(0, 0, 0, 0.8);
-          padding: auto;
-          font-size: 120%;
-          text-align: center;
-        }
+.song-item{ /* Within the song container */
+  background-color:#363636;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: auto;
+  font-size: 120%;
+  text-align: center;
+}
 
-/*BUTTON************************************************************/
-
-/* Below is code from stack */
+/* Below is code for Like Slider */
 
 .grid {
   display: grid;
@@ -115,7 +110,7 @@
   transform: rotateY(180deg);
 }
 
-/* Above is code from stack */
+/* Above is code from Like Slider */
 
 
 /*LIKE BUTTON************************************************************/
@@ -190,6 +185,17 @@ input:checked + .slider:before {
   height: 75px;
 }
 
+a.button {
+  -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+    color: white;
+    font-size: 120%;
+}
+
 
 /* For mobile phones: */
 [class*="col-"] {
@@ -241,6 +247,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://youtu.be/aQUlA8Hcv4s" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -258,6 +266,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=fJ9rUzIMcZQ" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -275,6 +285,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=3CkLMG5NwUg" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -292,6 +304,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=nfWlot6h_JM" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -309,6 +323,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=4m1EFMoRFvY" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -328,6 +344,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=x3bfa3DZ8JM" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -345,6 +363,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=PsO6ZnUZI0g" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -362,6 +382,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=wrvN87l3s08" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -379,6 +401,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=rnZQvgWhM5s&list=PLLBJrClJPlWJScARaoX_LIw1n3LiPoZZQ" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -396,6 +420,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=Zi_XLOBDo_Y" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -415,6 +441,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=Cr8K88UcO0s" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -432,6 +460,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=wycjnCCgUes" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -450,6 +480,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=w00IDEqfl_Q" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -467,6 +499,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=OSUxrSe5GbI" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -484,6 +518,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=ZAiQP7NPibo" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -503,6 +539,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=WrsFXgQk5UI" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -520,6 +558,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=wXhTHyIgQ_U" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -537,6 +577,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=w4tzZ47mDZQ" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -554,6 +596,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=tQ0yjYUFKAE" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -571,6 +615,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=LjxulQ1bEWg" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -590,6 +636,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=nCg3ufihKyU" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -607,6 +655,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=NUVCQXMUVnI" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -624,6 +674,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=HIwAI05Y1fU" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -641,6 +693,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="ttps://www.youtube.com/watch?v=wzMrK-aGCug" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
@@ -658,6 +712,8 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=l0U7SxXHkPY" target="_blank" class="button">Listen</a>
                   </div>
                 </div>
               </div>
