@@ -54,69 +54,13 @@
         }
       
       
-        .song-item, .back { /* Within the song container */
+        .song-item{ /* Within the song container */
           background-color:#363636;
           border: 1px solid rgba(0, 0, 0, 0.8);
           padding: auto;
           font-size: 120%;
           text-align: center;
         }
-
-/* hide back of pane during swap */
-.front, .back {
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* front pane, placed above back .front { */
-.front {
-  z-index: 2;
-  transform: rotateY(0deg);
-  height: 100%;
-  width: 100%;
-}
-
-/* back, initially hidden pane */
-.back {
-  transform: rotateY(180deg);
-  background-color: #9b2eb6;
-  height: 100%;
-  width: 100%;
-}
-
-/* flip speed */
-.flipper {
-  transition: 0.6s;
-  transform-style: preserve-3d;
-  position: relative;
-}
-      .song-item:hover {
-          background-color: #363636;
-          /* #9b2eb6 */
-        }
-      
-      
-        .song-item img { /* Size of the images within the container */
-          width: 100%;
-          height: 100%;
-        }
-      
-        figcaption {
-          /*color: #9b2eb6;*/
-          color: white;
-          text-align: center;
-          text-decoration: underline;
-          text-decoration-line: white;
-          /*text-decoration-color: #9b2eb6;*/
-        }
-
-/* flip the pane when hovered */
-.song-item:hover .flipper {
-  transform: rotateY(180deg);
-}
-
 
 /*BUTTON************************************************************/
 
@@ -128,7 +72,6 @@
   justify-items: center;
   align-items: center;
   grid-gap: 10px;
-  /*border: 1px solid rgba(0, 0, 0, 0.8);*/
 }
 
 .flip-card {
@@ -174,84 +117,8 @@
 
 /* Above is code from stack */
 
-/*FLIP************************************************************/
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.flip-box {
-  background-color: transparent;
-  width: 100%;
-  height: 100%;
-  border: 1px solid #f1f1f1;
-  /*perspective: 1000px;*/
-}
-
-.flip-box-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.flip-box:hover .flip-box-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-box-front, .flip-box-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-box-front {
-  background-color: #bbb;
-  color: black;
-}
-
-.flip-box-back {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
-}
-
-/*FLIP************************************************************/
-
 
 /*LIKE BUTTON************************************************************/
-        .fa {
-          font-size: 50px;
-          cursor: pointer;
-          user-select: none;
-          color: white;
-          text-align: right;
-        }
-
-        .fa:hover {
-          color: #f23788;
-        }
-
-        .fa:active{
-          color: #f23788;
-        }
-
-        a:active{
-          color: #f23788;
-        }
-
-#testbutton {
-  background-color: #0f2e0c;
-  color: white
-}
-
-#testbutton.clicked {
-  background-color: #ba0202;
-}
 
 /* Toggle like*/
 .switch {
@@ -318,11 +185,7 @@ input:checked + .slider:before {
 
 
 /*LIKE BUTTON************************************************************/
-
-
-
-
-      
+  
         #playButton{ /* Play button that will play a sound when clicked on*/ 
           width: 150px;
           height: 75px;
@@ -414,8 +277,6 @@ input:checked + .slider:before {
 <h1><div id="header2">On Repeat</div></h1>
       <div class="song-container" id="sc">
         <!--IMAGES-->
-        <!--Template below-->
-        <!--<a href="#"><div class="song-item"><figure><img src=""><figcaption>Text</figcaption></figure></div></a>-->
 
               <div class="flip-card">
                 <div class="flip-card-inner">
@@ -430,15 +291,6 @@ input:checked + .slider:before {
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
-                     
-                    <button id="testbutton">Toggle</button>
-                    <button id="btn" style="background-color: salmon">Button</button>
-                    <script> src="Scripts.js"</script>
-                    
-
-                    <button onclick="log()">Click me!</button>
-
-                    <button onclick="onClick()">Click Here</button>
                   </div>
                 </div>
               </div>
@@ -869,78 +721,3 @@ input:checked + .slider:before {
     <script src="Scripts.js"></script>
 </body>
 </html>
-
-
-<!-- 
-
-<a href="https://youtu.be/aQUlA8Hcv4s"><div class="song-item" style="background-color:#363636"><figure><img src="https://m.media-amazon.com/images/I/71ltC5iNaDL._SL1500_.jpg"><figcaption>Mr. Blue Sky  </figcaption></figure> <h1><div id="header1">Like</div></h1>
-                    <label class="switch">
-                      <input type="checkbox">
-                      <span class="slider round"></span>
-                    </label></div></a>
-        
-<i onclick="myFunction(this)" class="fa fa-heart"></i>
-
-
-.song-item { /* Within the song container */
-          background-color:#363636;
-          border: 1px solid rgba(0, 0, 0, 0.8);
-          padding: auto;
-          font-size: 120%;
-          text-align: center;
-        }
-      
-        .song-item:hover {
-          background-color: #9b2eb6;
-        }
-        
-        .song-item img { /* Size of the images within the container */
-          width: 80%;
-          height: 80%;
-        }
-      
-        figcaption {
-          /*color: #9b2eb6;*/
-          color: white;
-          text-align: center;
-          text-decoration: underline;
-          text-decoration-line: white;
-          /*text-decoration-color: #9b2eb6;*/
-        }
-
-
-        <div class="song-item"> <div class="flipper">
-  <div class="front"><figure><img src=  ></figure></div>
-    <div class="back"><figcaption> <br> B  </figcaption><i onclick="myFunction(this)" class="fa fa-heart"></i></div>
-  </div>
-</div>
-
-
-
- <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <img src= "https://m.media-amazon.com/images/I/71ltC5iNaDL._SL1500_.jpg"alt="Avatar" style="width:100%;height:100%;" />
-                  </div>
-                  <div class="flip-card-back">
-                    <br />
-                    <p>Mr. Blue Sky</p>
-                    <h1><div id="header1">Like</div></h1>
-                    <label class="switch">
-                      <input type="checkbox">
-                      <span class="slider round"></span>
-                    </label>
-                     
-                    <button id="testbutton">Toggle</button>
-                    <button id="btn" style="background-color: salmon">Button</button>
-                    <script> src="Scripts.js"</script>
-                    
-
-                    <button onclick="log()">Click me!</button>
-
-                    <button onclick="onClick()">Click Here</button>
-                  </div>
-                </div>
-              </div>
-
--->
