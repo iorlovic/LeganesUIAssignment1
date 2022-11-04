@@ -145,25 +145,3 @@ function setPlaceholders() {
     dob.placeholder = getCookie("dob");
     dob.value = getCookie("dob");
 }
-
-('.flip-container .flipper').click(function() {
-    $(this).closest('.flip-container').toggleClass('hover');
-    $(this).css('transform, rotateY(180deg)');
-});
-
-
-btn.addEventListener('click', function onClick(event) {
-  const backgroundColor = btn.style.backgroundColor;
-
-  if (backgroundColor === 'salmon') {
-    btn.style.backgroundColor = 'green';
-
-    // 👇️ optionally change text color
-    // btn.style.color = 'white';
-  } else {
-    btn.style.backgroundColor = 'salmon';
-
-    // 👇️ optionally change text color
-    // btn.style.color = 'blue';
-  }
-});
