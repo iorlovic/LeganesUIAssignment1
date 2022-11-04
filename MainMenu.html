@@ -253,6 +253,69 @@ body {
   background-color: #ba0202;
 }
 
+/* Toggle like*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: red;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px red;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Toggle like*/
+
 
 /*LIKE BUTTON************************************************************/
 
@@ -353,12 +416,6 @@ body {
         <!--IMAGES-->
         <!--Template below-->
         <!--<a href="#"><div class="song-item"><figure><img src=""><figcaption>Text</figcaption></figure></div></a>-->
-        
-        <section id="team"> 
-          <div class="container">
-            <div class="grid">
-
-             <!-- First 5-->
 
               <div class="flip-card">
                 <div class="flip-card-inner">
@@ -368,7 +425,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Mr. Blue Sky</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                      
                     <button id="testbutton">Toggle</button>
                     <button id="btn" style="background-color: salmon">Button</button>
@@ -390,7 +451,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Queen II</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -403,7 +468,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Taylor Swift</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -416,7 +485,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Morgan Wallen</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -429,7 +502,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Beyonce</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -444,7 +521,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Khalid</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -457,7 +538,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Kanye West</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -470,7 +555,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Trippie Redd</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -483,7 +572,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Ye & Cudi</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -496,7 +589,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Michael Jackson</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -511,7 +608,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Bad Bunny</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -524,7 +625,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Tame Impala</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -538,7 +643,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Alfie Templeton</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -551,7 +660,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Drake</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -564,7 +677,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Offset</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -579,7 +696,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Lil Uzi Vert</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -592,7 +713,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Post Malone</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -605,7 +730,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Pop Smoke</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -618,7 +747,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Justin Bieber</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -631,7 +764,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Tyga</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -646,7 +783,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Tiesto</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -659,7 +800,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>David Guetta</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -672,7 +817,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Jack Harlow</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -685,7 +834,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Rae Sremmurd</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -698,7 +851,11 @@ body {
                   <div class="flip-card-back">
                     <br />
                     <p>Future</p>
-                    <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -716,7 +873,11 @@ body {
 
 <!-- 
 
-<a href="https://youtu.be/aQUlA8Hcv4s"><div class="song-item" style="background-color:#363636"><figure><img src="https://m.media-amazon.com/images/I/71ltC5iNaDL._SL1500_.jpg"><figcaption>Mr. Blue Sky  </figcaption></figure> <i onclick="myFunction(this)" class="fa fa-heart"></i></div></a>
+<a href="https://youtu.be/aQUlA8Hcv4s"><div class="song-item" style="background-color:#363636"><figure><img src="https://m.media-amazon.com/images/I/71ltC5iNaDL._SL1500_.jpg"><figcaption>Mr. Blue Sky  </figcaption></figure> <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label></div></a>
         
 <i onclick="myFunction(this)" class="fa fa-heart"></i>
 
@@ -753,5 +914,33 @@ body {
     <div class="back"><figcaption> <br> B  </figcaption><i onclick="myFunction(this)" class="fa fa-heart"></i></div>
   </div>
 </div>
+
+
+
+ <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src= "https://m.media-amazon.com/images/I/71ltC5iNaDL._SL1500_.jpg"alt="Avatar" style="width:100%;height:100%;" />
+                  </div>
+                  <div class="flip-card-back">
+                    <br />
+                    <p>Mr. Blue Sky</p>
+                    <h1><div id="header1">Like</div></h1>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                     
+                    <button id="testbutton">Toggle</button>
+                    <button id="btn" style="background-color: salmon">Button</button>
+                    <script> src="Scripts.js"</script>
+                    
+
+                    <button onclick="log()">Click me!</button>
+
+                    <button onclick="onClick()">Click Here</button>
+                  </div>
+                </div>
+              </div>
 
 -->

@@ -188,6 +188,7 @@ btn.addEventListener('click', function onClick(event) {
 
 function log() {
     console.log('Clicked');
+    btn.style.backgroundColor = 'green';
   };
 
 
