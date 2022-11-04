@@ -128,7 +128,7 @@
   justify-items: center;
   align-items: center;
   grid-gap: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  /*border: 1px solid rgba(0, 0, 0, 0.8);*/
 }
 
 .flip-card {
@@ -235,6 +235,25 @@ body {
         .fa:hover {
           color: #f23788;
         }
+
+        .fa:active{
+          color: #f23788;
+        }
+
+        a:active{
+          color: #f23788;
+        }
+
+#testbutton {
+  background-color: #0f2e0c;
+  color: white
+}
+
+#testbutton.clicked {
+  background-color: #ba0202;
+}
+
+
 /*LIKE BUTTON************************************************************/
 
 
@@ -335,7 +354,7 @@ body {
         <!--Template below-->
         <!--<a href="#"><div class="song-item"><figure><img src=""><figcaption>Text</figcaption></figure></div></a>-->
         
-        <section id="team">
+        <section id="team"> 
           <div class="container">
             <div class="grid">
 
@@ -350,6 +369,15 @@ body {
                     <br />
                     <p>Mr. Blue Sky</p>
                     <i onclick="myFunction(this)" class="fa fa-heart"></i>
+                     
+                    <button id="testbutton">Toggle</button>
+                    <button id="btn" style="background-color: salmon">Button</button>
+                    <script> src="Scripts.js"</script>
+                    
+
+                    <button onclick="log()">Click me!</button>
+
+                    <button onclick="onClick()">Click Here</button>
                   </div>
                 </div>
               </div>

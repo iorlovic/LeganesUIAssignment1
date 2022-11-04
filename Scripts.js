@@ -7,6 +7,7 @@ const SEARCHINPUT = window.parent.document.getElementById("searchInput");
 const SEARCHTEXT = document.getElementById("headerSearch");
 const NAME = document.getElementById("name");
 const DATE = document.getElementById("dates");
+const btn = document.getElementById('btn');
 
 function logIn() {
     console.log("User Cookie: " + getCookie("user"));
@@ -156,17 +157,53 @@ function setPlaceholders() {
     dob.placeholder = getCookie("dob");
     dob.value = getCookie("dob");
 }
-<<<<<<< HEAD
-}
 
 $('.flip-container .flipper').click(function() {
     $(this).closest('.flip-container').toggleClass('hover');
     $(this).css('transform, rotateY(180deg)');
 });
 
-=======
+let testButton = document.getElementById("testbutton");
 
-function createPlaylist() {
-    return true;
-}
->>>>>>> 97a6f3dde3ab0cdeaee21f2b690e7b69bb4c5c4a
+testButton.addEventListener("click", () => {
+  testButton.classList.toggle('clicked');
+})
+
+
+btn.addEventListener('click', function onClick(event) {
+  const backgroundColor = btn.style.backgroundColor;
+
+  if (backgroundColor === 'salmon') {
+    btn.style.backgroundColor = 'green';
+
+    // 👇️ optionally change text color
+    // btn.style.color = 'white';
+  } else {
+    btn.style.backgroundColor = 'salmon';
+
+    // 👇️ optionally change text color
+    // btn.style.color = 'blue';
+  }
+});
+
+function log() {
+    console.log('Clicked');
+  };
+
+
+function onClick() {
+    const backgroundColor = btn.style.backgroundColor;
+  
+    if (backgroundColor === 'salmon') {
+      btn.style.backgroundColor = 'green';
+  
+      // 👇️ optionally change text color
+      // btn.style.color = 'white';
+    } else {
+      btn.style.backgroundColor = 'salmon';
+  
+      // 👇️ optionally change text color
+      // btn.style.color = 'blue';
+    }
+  }
+
