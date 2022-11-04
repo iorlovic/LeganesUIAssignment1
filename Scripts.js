@@ -130,8 +130,12 @@ function openUser() {
     NAME.innerHTML = "NAME: " + getCookie("user");
 }
 
+/*
 function openDate() {
     DATE.innerHTML = getDate("date");
+}
+*/
+
 function setPlaceholders() {
     var user = document.getElementById("user");
     var pass = document.getElementById("password");
@@ -152,6 +156,7 @@ function setPlaceholders() {
     dob.placeholder = getCookie("dob");
     dob.value = getCookie("dob");
 }
+<<<<<<< HEAD
 }
 
 $('.flip-container .flipper').click(function() {
@@ -159,3 +164,9 @@ $('.flip-container .flipper').click(function() {
     $(this).css('transform, rotateY(180deg)');
 });
 
+=======
+
+function createPlaylist() {
+    return true;
+}
+>>>>>>> 97a6f3dde3ab0cdeaee21f2b690e7b69bb4c5c4a
