@@ -25,6 +25,12 @@
     color: #9b2eb6;;
   }
 
+  #header4 /*ON REPEAT*/{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 35px;
+    color: white;;
+  }
+
   *{
     box-sizing: border-box;
   }
@@ -70,27 +76,141 @@
     height: 80%;
   }
 
-  figcaption {
-    /*color: #9b2eb6;*/
-    color: white;
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-line: white;
-    /*text-decoration-color: #9b2eb6;*/
-  }
-
 /*LIKE BUTTON************************************************************/
-  .fa {
-    font-size: 50px;
-    cursor: pointer;
-    user-select: none;
-    color: white;
-    text-align: right;
+a.button {
+  -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+    color: black;
+    font-size: 120%;
+    background-color: white;
+    border-width: 1px;
+    border-color:rgba(0, 0, 0, 0.8);
+    border-radius: 12px;
+    padding: 3px;
+}
+
+  /* Below is code from Like Slider ***************************************/
+
+  /* Toggle like*/
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
   }
 
-  .fa:hover {
-    color: #f23788;
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
   }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: red;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px red;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /* Toggle like*/
+
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-items: center;
+    align-items: center;
+    grid-gap: 10px;
+    /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+  }
+
+  .flip-card {
+    border-style: hidden;
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+
+  .flip-card-back {
+    background-color: #9b2eb6;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  /* Above is code from Like Slider ******************************************/
+
 /*LIKE BUTTON************************************************************/
 
 
@@ -129,19 +249,105 @@
 
 <body>
   <div class="grid-item5">
-    <h1><div id="headerSearch">Search Results</div></h1>
-    <div class="song-container">
-      <a href="https://www.youtube.com/watch?v=wuJIqmha2Hk"><div class="song-item" style="background-color:#363636"><figure><img src="https://video-images.vice.com/_uncategorized/1527898271751-0bffd93463afe53e7f651f72bedfc78b1000x1000x1.jpeg"><figcaption>College Dropout <audio id="playButton" controls>
-          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-      <a href="https://www.youtube.com/watch?v=fJ9rUzIMcZQ"><div class="song-item" style="background-color:#363636"><figure><img src="https://upload.wikimedia.org/wikipedia/en/f/f4/Late_registration_cd_cover.jpg"><figcaption>Late Registration <audio id="playButton" controls>
-          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-      <a href="https://www.youtube.com/watch?v=3CkLMG5NwUg"><div class="song-item" style="background-color:#363636"><figure><img src="https://upload.wikimedia.org/wikipedia/en/7/70/Graduation_%28album%29.jpg"><figcaption>Graduation <audio id="playButton" controls>
-          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-      <a href="https://www.youtube.com/watch?v=nfWlot6h_JM"><div class="song-item" style="background-color:#363636"><figure><img src="https://upload.wikimedia.org/wikipedia/en/f/f1/808s_%26_Heartbreak.png"><figcaption>808s & Heartbreak <audio id="playButton" controls>
-          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
-      <a href="https://www.youtube.com/watch?v=4m1EFMoRFvY"><div class="song-item" style="background-color:#363636"><figure><img src="https://upload.wikimedia.org/wikipedia/tr/f/f0/My_Beautiful_Dark_Twisted_Fantasy.jpg"><figcaption>My Beautiful Dark Twisted Fantasy <audio id="playButton" controls>
-          <source src="https://bigsoundbank.com/UPLOAD/mp3/0001.mp3" type="audio/mp3"></audio></figcaption></figure></div></a>
+    <h1><div id="header1">Favorites</div></h1>
+    <div class = "song-container">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src= "https://video-images.vice.com/_uncategorized/1527898271751-0bffd93463afe53e7f651f72bedfc78b1000x1000x1.jpeg" alt="Avatar" style="width:100%;height:100%;" />
+          </div>
+          <div class="flip-card-back">
+            <br />
+            <p>College Dropout</p>
+            <h1><div id="header4">Like</div></h1>
+                  <label class="switch">
+                    <input type="checkbox" unchecked>
+                    <span class="slider round"></span>
+                  </label>
+                  <br>
+                  <a href="https://www.youtube.com/watch?v=1fpkdSfPzio&list=PLTDmNT4owFz2pivbgvdIIUR3yYTx6LCY0" target="_blank" class="button">Listen</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src= "https://upload.wikimedia.org/wikipedia/en/f/f4/Late_registration_cd_cover.jpg" alt="Avatar" style="width:100%;height:100%;" />
+          </div>
+          <div class="flip-card-back">
+            <br />
+            <p>Late Registration</p>
+            <h1><div id="header4">Like</div></h1>
+                  <label class="switch">
+                    <input type="checkbox" unchecked>
+                    <span class="slider round"></span>
+                  </label>
+                  <br>
+                  <a href="https://www.youtube.com/watch?v=1fpkdSfPzio&list=PLTDmNT4owFz2pivbgvdIIUR3yYTx6LCY0" target="_blank" class="button">Listen</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src= "https://upload.wikimedia.org/wikipedia/en/7/70/Graduation_%28album%29.jpg" alt="Avatar" style="width:100%;height:100%;" />
+          </div>
+          <div class="flip-card-back">
+            <br />
+            <p>Graduation</p>
+            <h1><div id="header4">Like</div></h1>
+                  <label class="switch">
+                    <input type="checkbox" unchecked>
+                    <span class="slider round"></span>
+                  </label>
+                  <br>
+                  <a href="https://www.youtube.com/watch?v=1fpkdSfPzio&list=PLTDmNT4owFz2pivbgvdIIUR3yYTx6LCY0" target="_blank" class="button">Listen</a>
+                  </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src= "https://upload.wikimedia.org/wikipedia/en/f/f1/808s_%26_Heartbreak.png" alt="Avatar" style="width:100%;height:100%;" />
+          </div>
+          <div class="flip-card-back">
+            <br />
+            <p>808s & Heartbreak</p>
+            <h1><div id="header4">Like</div></h1>
+                  <label class="switch">
+                    <input type="checkbox" unchecked>
+                    <span class="slider round"></span>
+                  </label>
+                  <br>
+                  <a href="https://www.youtube.com/watch?v=1fpkdSfPzio&list=PLTDmNT4owFz2pivbgvdIIUR3yYTx6LCY0" target="_blank" class="button">Listen</a>
+                  </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src= "https://upload.wikimedia.org/wikipedia/tr/f/f0/My_Beautiful_Dark_Twisted_Fantasy.jpg" alt="Avatar" style="width:100%;height:100%;" />
+          </div>
+          <div class="flip-card-back">
+            <br />
+            <p>My Beautiful Dark Twisted Fantasy</p>
+            <h1><div id="header4">Like</div></h1>
+                  <label class="switch">
+                    <input type="checkbox" unchecked>
+                    <span class="slider round"></span>
+                  </label>
+                  <br>
+                  <a href="https://www.youtube.com/watch?v=1fpkdSfPzio&list=PLTDmNT4owFz2pivbgvdIIUR3yYTx6LCY0" target="_blank" class="button">Listen</a>
+        </div>
+      </div>
+
     </div>
+
+
   </div>
   <script src="Scripts.js"></script>
   <script>
